@@ -63,6 +63,11 @@ body {
   font-weight: 400;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .container {
   max-width: 1480px;
   padding: 0 20px;
@@ -73,6 +78,41 @@ body {
   max-width: 1800px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.title {
+  font-family: 'Proxima Nova';
+  color: var(--white);
+  font-weight: 800;
+  line-height: 66px;
+  font-size: clamp(1.875rem, 1.3393rem + 2.6786vw, 3.75rem);
+  text-transform: uppercase;
+}
+
+.title_blue { 
+  font-family: 'Proxima Nova';
+  color: var(--blue);
+  font-weight: 800;
+  line-height: 66px;
+  font-size: clamp(1.875rem, 1.3393rem + 2.6786vw, 3.75rem);
+  text-transform: uppercase;
+}
+
+.box_shadow_main {
+  -webkit-box-shadow: 0px 0px 23px 6px rgba(34, 60, 80, 0.12);
+  -moz-box-shadow: 0px 0px 23px 6px rgba(34, 60, 80, 0.12);
+  box-shadow: 0px 0px 23px 6px rgba(34, 60, 80, 0.12);
+}
+
+
+@media screen and (max-width: 769px) {
+  .title.title_mobile_blue {
+    color: var(--blue);
+  }
 }
 
 .flex {
@@ -107,3 +147,4 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
+
