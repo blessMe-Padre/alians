@@ -10,6 +10,8 @@
 
   --blue: #2a3a57;
   --white: #ffffff;
+  --orange: #d77f53;
+  --dark-orange: #a54d21;
 }
 
 @media (prefers-color-scheme: light) {
