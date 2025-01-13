@@ -1,0 +1,146 @@
+.hero {
+    position: relative;
+    text-align: center;
+    min-height: 751px;
+    margin-top: 40px;
+    color: var(--white);
+}
+
+.hero_title {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white);
+    max-width: 909px;
+    margin: 0 0 30px 0;
+}
+
+.hero_text {
+    font-size: 24px;
+}
+
+.hero_bg_wrapper {
+    position: relative;
+    min-height: 751px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero_bg_wrapper img {
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--blue);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: left;
+    transform: translateY(-150px);
+}
+
+.hero_list li {
+    padding: 0 25px;
+}
+
+.hero_list li:not(:last-child) {
+    border-right: 1px solid var(--white);
+}
+
+.hero_list li p {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+@media (max-width:900px) {
+    .hero_list {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px;
+        transform: translateY(-150px);
+        gap: 30px;
+    }
+
+    .hero_list li:nth-child(2) {
+        border: none;
+    }
+}
+
+@media (max-width:768px) {
+    .hero_list {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+        transform: translateY(-150px);
+        gap: 30px;
+    }
+
+    .hero_list li {
+        padding: 0;
+    }
+}
+
+@media (max-width:560px) {
+    .hero_title {
+        font-size: 35px;
+        padding: 0 20px;
+    }
+
+    .hero_list {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        transform: translateY(0);
+        gap: 20px;
+    }
+
+    .hero_list li p {
+        font-size: 16px;
+    }
+
+    .hero_bg_wrapper {
+        min-height: 370px;
+    }
+
+    .hero_text {
+        font-size: 16px;
+    }
+
+    .hero_bg_wrapper {
+        margin-bottom: 30px;
+    }
+
+    .hero .container {
+        padding: 0;
+    }
+
+    .hero_list li:not(:last-child) {
+        border-right: none;
+    }
+
+    .hero_list li:not(:last-child) {
+        border-bottom: 1px solid var(--white);
+    }
+}

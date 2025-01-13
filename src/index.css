@@ -93,7 +93,7 @@ a {
   text-transform: uppercase;
 }
 
-.title_blue { 
+.title_blue {
   font-family: 'Proxima Nova';
   color: var(--blue);
   font-weight: 800;
@@ -148,3 +148,11 @@ a {
   z-index: 1;
 }
 
+
+/* фикс кривых контейнеров */
+
+@media (max-width:560px) {
+  .hero .container {
+    padding: 0;
+  }
+}
