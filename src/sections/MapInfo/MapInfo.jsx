@@ -1,9 +1,10 @@
 import styles from './style.module.css';
-import pattern_bg from '../../assets/map_info/pattern_bg_1.png';
-import geo from '../../assets/icons/geo.svg';
+import pattern_bg from '/public/assets/map_info/pattern_bg_1.png';
+import pattern_bg_2 from '/public/assets/map_info/pattern_bg_2.png';
+import geo from '/public/assets/icons/geo.svg';
 
-const MapInfo = () => {
-
+const MapInfo = ({ pattern }) => {
+    
     const data = [
         {
             'title': 'Центральный офис',
@@ -55,12 +56,32 @@ const MapInfo = () => {
 
 
     ]
+
+    let src = '';
+    
+    console.log(pattern)
+
+    switch (pattern) {
+        case 1:
+            src = pattern_bg
+            break;
+        
+        case 2:
+            src = pattern_bg_2
+            break;
+         default:
+            src = '';
+            console.error(`Error: invalid pattern: ${pattern}`);
+
+    }
+
+    console.log(src);
     
 
     return (
         <section className={styles.section}>
             <div className='page-wrapper relative'>
-               <img src={pattern_bg} className={styles.background} alt='' />
+               <img src={src} className={styles.background} alt='' />
                 <div className={styles.content_wrapper}>
                     <h2 className='title title_mobile_blue'>
                         Пункты приема

@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet";
 
+import { MapInfo } from "../sections";
+
 export default function HomePage() {
     return (
         <>
@@ -28,6 +30,10 @@ export default function HomePage() {
             </Helmet>
 
             <div>HomePage</div>
+
+
+            <MapInfo pattern={2} />
+
         </>
     )
 }

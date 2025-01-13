@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import { MapInfo } from "../sections";
 export default function Contacts() {
     return (
         <>
@@ -25,7 +26,10 @@ export default function Contacts() {
                 <meta name="robots" content="index, follow" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Helmet>
-            <div>Contacts</div>
+            
+
+
+            <MapInfo pattern={'1'}/>
         </>
     )
 }
