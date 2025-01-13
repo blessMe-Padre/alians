@@ -1,3 +1,4 @@
+import Form from '../Form/Form';
 import styles from './style.module.css';
 
 export default function Popup({ active, setActive }) {
@@ -28,12 +29,15 @@ export default function Popup({ active, setActive }) {
                         onClick={() => { setActive(false) }}
                     >
                         <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="3" y="18.4463" width="21.8033" height="0.726776" rx="0.363388" transform="rotate(-45 3 18.4463)" fill="white" />
-                            <rect x="4.21094" y="3" width="21.8033" height="0.726776" rx="0.363388" transform="rotate(45 4.21094 3)" fill="white" />
+                            <rect x="3" y="18.4463" width="21.8033" height="0.726776" rx="0.363388" transform="rotate(-45 3 18.4463)" fill="#2a3a57" />
+                            <rect x="4.21094" y="3" width="21.8033" height="0.726776" rx="0.363388" transform="rotate(45 4.21094 3)" fill="#2a3a57" />
                         </svg>
                     </button>
 
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quae accusamus non itaque, qui asperiores esse modi animi accusantium a?
+                    <Form
+                        title="получите расчет стоимости"
+                        subtitle="Оставьте контакты и квалифицированные специалисты за 5 минут рассчитают цену"
+                    />
 
                 </div>
             </div>

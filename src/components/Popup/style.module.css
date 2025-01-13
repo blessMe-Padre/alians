@@ -27,7 +27,7 @@
 .popup__body {
     width: 100%;
     min-height: 100%;
-    padding: 30px 10px;
+    /* padding: 30px 10px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,8 +41,8 @@
     max-width: 740px;
     min-height: 430px;
     padding: 40px;
-    background: var(--gray);
-    color: var(--black);
+    background: var(--white);
+    color: var(--blue);
     text-align: center;
 }
 
@@ -96,4 +96,10 @@
     background-color: #303030;
     border-radius: 10px;
     stroke: white;
+}
+
+@media (max-width: 560px) {
+    .popup__content {
+        padding: 20px;
+    }
 }

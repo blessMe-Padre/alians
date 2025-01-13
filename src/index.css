@@ -80,6 +80,10 @@ body {
   align-items: center;
 }
 
+.gap-20 {
+  gap: 20px;
+}
+
 .lock {
   overflow: hidden;
 }
