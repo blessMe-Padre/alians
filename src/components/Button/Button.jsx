@@ -1,12 +1,13 @@
 import styles from "./styles.module.css";
 
-export default function Button() {
+export default function Button({ href, text, handleClick }) {
     return (
         <a
-            href="#popup"
+            href={href}
             className={styles.button}
+            onClick={handleClick}
         >
-            Заказать звонок
+            {text}
         </a>
     )
 }
