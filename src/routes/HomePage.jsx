@@ -65,10 +65,29 @@ export default function HomePage() {
                 </div>
             </section>
 
-            <section>
-                <h2 className="title toggle_color">Лицензированная деятельность группы компаний
+            <section className={styles.license}>
+                <h2 className="title center toggle_color">Лицензированная деятельность группы компаний
                     «ВОСТОЧНЫЙ АЛЬЯНС»</h2>
+                <div className={styles.license_wrapper}>
+                    <ul className={styles.license_list}>
+                        <li className={styles.license_item}>
+                            <div className={styles.license_count}>01</div>
+                            <p><strong>Основным направлением деятельности ГК «Восточный Альянс»</strong> является прием и переработка лома черных и цветных металлов.</p>
+                        </li>
+                        <li className={styles.license_item}>
+                            <div className={styles.license_count}>02</div>
+                            <p><strong>Предлагаем комплекс услуг на профессиональном уровне:</strong> демонтаж, резка, погрузка и вывоз металлолома в наши пункты приема.</p>
+                        </li>
+                        <li className={styles.license_item}>
+                            <div className={styles.license_count}>03</div>
+                            <p><strong>Работаем как с физическими, так и с юридическими лицами.</strong> Постоянно улучшаем сервис для наших клиентов.</p>
+                        </li>
+                    </ul>
 
+                    <div className={`${styles.license_block} image-wrapper`}>
+                        <img src="./content/image-1.webp" alt="img" width={890} height={537} />
+                    </div>
+                </div>
 
             </section>
 
