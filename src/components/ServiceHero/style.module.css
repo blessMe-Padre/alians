@@ -29,7 +29,7 @@
 
 @media screen and (max-width: 480px) {
     .bg_service {
-        height: 100vh;
+        height: 70vh;
         object-fit: cover;
     }
 
