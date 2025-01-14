@@ -91,18 +91,20 @@ export default function HomePage() {
 
             </section>
 
-            <section className={styles.areas}>
+            <section className={`${styles.areas} areas`}>
                 <div className="container">
                     <h2 className="title center toggle_color">направления работы</h2>
-                    {/* <ul className={styles.areas_list}>
+                    <ul className={styles.areas_list}>
                         <li className={styles.areas_item}>
                             <a href="#">
                                 <div className="image-wrapper">
                                     <img src="./content/image-2.webp" width={467} height={250} alt="image" />
                                 </div>
-                                <h3>Заготовка и переработка лома и отходов черных и цветных металлов</h3>
-                                <p>Большая благоустроенная территория с удобным подъездом, оборудованные цеха для сортировки и хранения лома, сертифицированные автомобильные весы с максимальной нагрузкой до 60 тонн, современное оборудование и высококвалифицированный персонал</p>
-                                <img src="./icons/arrow-top-right.svg" width={40} height={40} alt="icon" />
+                                <div className={styles.areas_item_content}>
+                                    <h3>Заготовка и переработка лома и отходов черных и цветных металлов</h3>
+                                    <p>Большая благоустроенная территория с удобным подъездом, оборудованные цеха для сортировки и хранения лома, сертифицированные автомобильные весы с максимальной нагрузкой до 60 тонн, современное оборудование и высококвалифицированный персонал</p>
+                                    <img className={styles.areas_item_img} src="./icons/arrow-top-right.svg" width={40} height={40} alt="icon" />
+                                </div>
                             </a>
                         </li>
                         <li className={styles.areas_item}>
@@ -110,9 +112,11 @@ export default function HomePage() {
                                 <div className="image-wrapper">
                                     <img src="./content/image-3.webp" width={467} height={250} alt="image" />
                                 </div>
-                                <h3>Транспортные услуги</h3>
-                                <p>Собственный парк техники различной модификации (грузовые автомобили, грейферные и крановые установки, экскаваторы, мультилифты и иная спецтехника)</p>
-                                <img src="./icons/arrow-top-right.svg" width={40} height={40} alt="icon" />
+                                <div className={styles.areas_item_content}>
+                                    <h3>Транспортные услуги</h3>
+                                    <p>Собственный парк техники различной модификации (грузовые автомобили, грейферные и крановые установки, экскаваторы, мультилифты и иная спецтехника)</p>
+                                    <img className={styles.areas_item_img} src="./icons/arrow-top-right.svg" width={40} height={40} alt="icon" />
+                                </div>
                             </a>
                         </li>
                         <li className={styles.areas_item}>
@@ -120,14 +124,16 @@ export default function HomePage() {
                                 <div className="image-wrapper">
                                     <img src="./content/image-3.webp" width={467} height={250} alt="image" />
                                 </div>
-                                <h3>Услуги внутрипортовой транспортной экспедиции при организации международной перевозки грузов</h3>
-                                <p>Услуга включает в себя целый комплекс таких услуг как: оформление всех необходимых документов, завоз и вывоз, прием и выдача грузов, терминальная обработка, погрузо-разгрузочные и складские услуги, информационное сопровождение и т.д. Услуга предоставляется «под ключ»</p>
-                                <img src="./icons/arrow-top-right.svg" width={40} height={40} alt="icon" />
+                                <div className={styles.areas_item_content}>
+                                    <h3>Услуги внутрипортовой транспортной экспедиции при организации международной перевозки грузов</h3>
+                                    <p>Услуга включает в себя целый комплекс таких услуг как: оформление всех необходимых документов, завоз и вывоз, прием и выдача грузов, терминальная обработка, погрузо-разгрузочные и складские услуги, информационное сопровождение и т.д. Услуга предоставляется «под ключ»</p>
+                                    <img className={styles.areas_item_img} src="./icons/arrow-top-right.svg" width={40} height={40} alt="icon" />
+                                </div>
                             </a>
                         </li>
 
 
-                    </ul> */}
+                    </ul>
                 </div>
             </section>
 
