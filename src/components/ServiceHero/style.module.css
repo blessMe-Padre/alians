@@ -1,0 +1,44 @@
+.service_content {
+    margin: 0 auto;
+    padding-top: clamp(3.125rem, 0.4464rem + 13.3929vw, 12.5rem);
+    padding-bottom: clamp(3.125rem, 0.4464rem + 13.3929vw, 12.5rem);
+    z-index: 1;
+    position: relative;
+    max-width: 900px;
+}
+
+.service_desc {
+    color: var(--white); 
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.bg_service {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    border-radius: 20px;
+}
+
+.service_wrapper {
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 480px) {
+    .bg_service {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .service_content {
+        padding-top: 100px;
+    }
+
+    .heroImage {
+        width: auto;
+    }
+
+}

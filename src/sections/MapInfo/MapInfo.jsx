@@ -80,7 +80,7 @@ const MapInfo = ({ pattern }) => {
             <div className='page-wrapper relative'>
                <img src={src} className={styles.background} alt='' />
                 <div className={styles.content_wrapper}>
-                    <h2 className='title title_mobile_blue'>
+                    <h2 className='title toggle_color title_mobile_blue'>
                         Пункты приема
                     </h2>
 
