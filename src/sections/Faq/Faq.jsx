@@ -63,7 +63,7 @@ const Faq = () => {
 
     return (
         <section className={styles.section}>
-            <div className='container'>
+            <div className={`${styles.container} container`}>
                 <h2 className='title_blue center'>ОТВЕТИЛИ НА ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
 
                 
