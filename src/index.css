@@ -13,12 +13,15 @@
   --orange: #d77f53;
   --main-gray: #F0F2F6;
   --dark-orange: #a54d21;
+
+  --toggle-color: var(--white);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #2a3a57;
     background-color: #ffffff;
+    --toggle-color: var(--blue);
   }
 }
 
@@ -89,13 +92,13 @@ a {
   font-family: 'Proxima Nova';
   color: var(--white);
   font-weight: 800;
-  line-height: 66px;
+  line-height: 1.2;
   font-size: clamp(1.875rem, 1.3393rem + 2.6786vw, 3.75rem);
   text-transform: uppercase;
   margin-bottom: 50px;
 }
 
-.title_blue { 
+.title_blue {
   font-family: 'Proxima Nova';
   color: var(--blue);
   font-weight: 800;
@@ -103,6 +106,14 @@ a {
   font-size: clamp(1.875rem, 1.3393rem + 2.6786vw, 3.75rem);
   text-transform: uppercase;
   margin-bottom: 50px;
+}
+
+.toggle_color {
+  color: var(--toggle-color);
+}
+
+.center {
+  text-align: center;
 }
 
 .box_shadow_main {
@@ -159,10 +170,30 @@ a {
   z-index: 1;
 }
 
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
 
+.image-wrapper img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
 
-@media screen and (max-width: 480px) {
-  .title, .title_blue {
-    line-height: 40px;
+.image-wrapper img:hover {
+  transform: scale(1.1);
+}
+
+/* фикс кривых контейнеров */
+
+@media (max-width:560px) {
+
+  .hero .container,
+  .areas .container {
+    padding: 0;
   }
 }

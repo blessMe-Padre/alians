@@ -19,3 +19,10 @@
 .button:hover {
     background-color: var(--dark-orange);
 }
+
+@media (max-width: 560px) {
+    .button {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
