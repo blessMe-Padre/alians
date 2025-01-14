@@ -64,7 +64,7 @@ const Faq = () => {
     return (
         <section className={styles.section}>
             <div className={`${styles.container} container`}>
-                <h2 className='title_blue center'>ОТВЕТИЛИ НА ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+                <h2 className='title_blue toggle_color center'>ОТВЕТИЛИ НА ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
 
                 
                 <div className={styles.content_wrapper}>
