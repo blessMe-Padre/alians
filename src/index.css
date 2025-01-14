@@ -193,6 +193,7 @@ a {
 @media (max-width:560px) {
 
   .hero .container,
+  .have_q .container,
   .areas .container {
     padding: 0;
   }

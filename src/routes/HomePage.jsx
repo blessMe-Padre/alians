@@ -3,7 +3,7 @@ import styles from "../styles/homepage.module.css";
 import { Helmet } from "react-helmet";
 
 
-import { MapInfo, Faq, HowWeWork } from "../sections";
+import { MapInfo, Faq, HowWeWork, HaveQuestion } from "../sections";
 import Button from "./../components/Button/Button";
 
 
@@ -34,7 +34,7 @@ export default function HomePage() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Helmet>
 
-            <section className={`${styles.hero} hero`}>
+            {/* <section className={`${styles.hero} hero`}>
                 <div className={styles.hero_bg_wrapper}>
                     <img className={styles.hero_bg} src="./hero.webp" alt="hero" width={1800} height={751} />
 
@@ -137,14 +137,15 @@ export default function HomePage() {
 
                     </ul>
                 </div>
-            </section>
+            </section> */}
+
+            {/* <HowWeWork /> */}
+            {/* <Faq /> */}
+            <HaveQuestion />
 
 
-            <HowWeWork />
 
-            <Faq />
-            
-            <MapInfo pattern={1} />
+            {/* <MapInfo pattern={1} /> */}
 
 
 

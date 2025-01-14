@@ -25,7 +25,7 @@ const initialFields = [
     },
 ]
 
-export default function Form({ title, subtitle }) {
+export default function Form({ title, subtitle, color = "#2a3a57", background = "#ffffff" }) {
     const [fields, setFields] = useState(initialFields);
     const [formMessage, setFormMessage] = useState('');
     const [isActive, setIsActive] = useState(false);
@@ -45,7 +45,7 @@ export default function Form({ title, subtitle }) {
             'https://api.freelancer-vl.ru/wp-json/contact-form-7/v1/contact-forms/38/feedback',
             formData,
         );
-        console.log('Ответ от WordPress:', response);
+        // console.log('Ответ от WordPress:', response);
         if (response.status !== 200) {
             return alert('Что-то пошло не так. Попробуйте еще раз.');
         }
@@ -73,7 +73,12 @@ export default function Form({ title, subtitle }) {
         <>
             <form onSubmit={handleSubmit} className="main-form">
                 <h2 className={styles.title}>{title}</h2>
-                <p className={styles.text}>{subtitle}</p>
+                <p
+                    className={styles.text}
+                    style={{ color: color }}
+                >
+                    {subtitle}
+                </p>
 
                 {fields.map(field => (
                     <div key={field.id} className='main-form__input'>
@@ -84,6 +89,7 @@ export default function Form({ title, subtitle }) {
                             id={field.id}
                             placeholder={field.placeholder}
                             className={styles.input}
+                            style={{ background: background, color: color }}
                         />
                         <p className='main-form__error-text'>{field.validation_message}</p>
                     </div>

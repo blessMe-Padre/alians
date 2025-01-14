@@ -93,4 +93,7 @@
         margin: 0 0 30px 0;
     }
 
+    .send_button_whatsapp {
+        width: 88%;
+    }
 }
