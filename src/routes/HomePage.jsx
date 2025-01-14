@@ -65,6 +65,13 @@ export default function HomePage() {
                 </div>
             </section>
 
+            <section>
+                <h2 className="title toggle_color">Лицензированная деятельность группы компаний
+                    «ВОСТОЧНЫЙ АЛЬЯНС»</h2>
+
+
+            </section>
+
 
             {/* <MapInfo pattern={2} /> */}
 

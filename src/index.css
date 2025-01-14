@@ -12,12 +12,15 @@
   --white: #ffffff;
   --orange: #d77f53;
   --dark-orange: #a54d21;
+
+  --toggle-color: var(--white);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #2a3a57;
     background-color: #ffffff;
+    --toggle-color: var(--blue);
   }
 }
 
@@ -100,6 +103,10 @@ a {
   line-height: 66px;
   font-size: clamp(1.875rem, 1.3393rem + 2.6786vw, 3.75rem);
   text-transform: uppercase;
+}
+
+.toggle_color {
+  color: var(--toggle-color);
 }
 
 .box_shadow_main {
