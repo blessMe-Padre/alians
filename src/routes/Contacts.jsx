@@ -29,7 +29,7 @@ export default function Contacts() {
             
 
 
-            <MapInfo pattern={'1'}/>
+            <MapInfo pattern={2} />
         </>
     )
 }

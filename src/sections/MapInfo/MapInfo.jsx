@@ -1,7 +1,7 @@
 import styles from './style.module.css';
-import pattern_bg from '/public/assets/map_info/pattern_bg_1.png';
-import pattern_bg_2 from '/public/assets/map_info/pattern_bg_2.png';
-import geo from '/public/assets/icons/geo.svg';
+import pattern_bg from '/public/map_info/pattern_bg_1.png';
+import pattern_bg_2 from '/public/map_info/pattern_bg_2.png';
+import geo from '/public/icons/geo.svg';
 
 const MapInfo = ({ pattern }) => {
     
@@ -73,10 +73,7 @@ const MapInfo = ({ pattern }) => {
             src = '';
             console.error(`Error: invalid pattern: ${pattern}`);
 
-    }
-
-    console.log(src);
-    
+    }    
 
     return (
         <section className={styles.section}>

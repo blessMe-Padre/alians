@@ -2,8 +2,10 @@ import styles from "../styles/homepage.module.css";
 
 import { Helmet } from "react-helmet";
 
-import { MapInfo } from "../sections";
+
+import { MapInfo, Faq, HowWeWork } from "../sections";
 import Button from "./../components/Button/Button";
+
 
 export default function HomePage() {
     return (
@@ -138,7 +140,13 @@ export default function HomePage() {
             </section>
 
 
-            {/* <MapInfo pattern={2} /> */}
+            <HowWeWork />
+
+            <Faq />
+            
+            <MapInfo pattern={1} />
+
+
 
         </>
     )

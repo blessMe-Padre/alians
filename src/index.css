@@ -11,6 +11,7 @@
   --blue: #2a3a57;
   --white: #ffffff;
   --orange: #d77f53;
+  --main-gray: #F0F2F6;
   --dark-orange: #a54d21;
 
   --toggle-color: var(--white);
@@ -94,6 +95,7 @@ a {
   line-height: 1.2;
   font-size: clamp(1.875rem, 1.3393rem + 2.6786vw, 3.75rem);
   text-transform: uppercase;
+  margin-bottom: 50px;
 }
 
 .title_blue {
@@ -103,6 +105,7 @@ a {
   line-height: 66px;
   font-size: clamp(1.875rem, 1.3393rem + 2.6786vw, 3.75rem);
   text-transform: uppercase;
+  margin-bottom: 50px;
 }
 
 .toggle_color {
@@ -119,6 +122,14 @@ a {
   box-shadow: 0px 0px 23px 6px rgba(34, 60, 80, 0.12);
 }
 
+
+.center {
+  text-align: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
 
 @media screen and (max-width: 769px) {
   .title.title_mobile_blue {
