@@ -6,6 +6,7 @@
 
 .content_wrapper {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
 }
 
@@ -24,7 +25,7 @@
 
 .button_wrapper {
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -93,10 +94,20 @@
     padding-top: 0;
 }
 
-
+@media screen and (max-width: 769px) {
+    .content_wrapper {
+        flex-direction: column;
+    }
+}
 
 @media (max-width: 560px) {
-
+    .section div.container {
+        /* margin: -20px; */
+    }
+    .content_wrapper {
+        flex-direction: column;
+    }
+    
     .content,
     .button {
         font-size: 1em;
@@ -120,16 +131,12 @@
     }
 }
 
-.list_content {
-    padding-left: 40px;
-    list-style: disc;
-}
-
 .item_content {
     margin-bottom: 10px;
 }
 
-
 .list {
-    margin-bottom: 60px;
+    padding: 0;
+    list-style: none !important;
+    margin: 0;
 }

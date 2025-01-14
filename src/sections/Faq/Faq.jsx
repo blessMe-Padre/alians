@@ -1,7 +1,7 @@
 import styles from './style.module.css';
 import faq_bg from '/public/faq/faq.png';
 import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const Faq = () => {
 

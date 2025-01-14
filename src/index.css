@@ -159,3 +159,10 @@ a {
   z-index: 1;
 }
 
+
+
+@media screen and (max-width: 480px) {
+  .title, .title_blue {
+    line-height: 40px;
+  }
+}
