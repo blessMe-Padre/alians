@@ -3,7 +3,7 @@ import styles from "../styles/homepage.module.css";
 import { Helmet } from "react-helmet";
 
 
-import { MapInfo, Faq, HowWeWork, HaveQuestion } from "../sections";
+import { MapInfo, Faq, HowWeWork, HaveQuestion, GetCost } from "../sections";
 import Button from "./../components/Button/Button";
 
 
@@ -141,7 +141,8 @@ export default function HomePage() {
 
             {/* <HowWeWork /> */}
             {/* <Faq /> */}
-            <HaveQuestion />
+            {/* <HaveQuestion /> */}
+            <GetCost />
 
 
 

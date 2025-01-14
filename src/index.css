@@ -188,6 +188,10 @@ a {
   transform: scale(1.1);
 }
 
+.main-form {
+  max-width: 690px;
+}
+
 /* фикс кривых контейнеров */
 
 @media (max-width:560px) {

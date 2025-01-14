@@ -7,6 +7,11 @@
     background-image: url('./map_info/pattern_bg_1.png');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.section_wrapper_container {
+    max-width: 1440px;
+    margin: 0 auto;
 
     display: grid;
     grid-template-columns: 60% 40%;
@@ -20,7 +25,7 @@
 }
 
 @media (max-width: 1023px) {
-    .section_wrapper {
+    .section_wrapper_container {
         display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
@@ -38,11 +43,10 @@
 }
 
 @media (max-width: 560px) {
-    .section_wrapper {
+    .section_wrapper_container {
         padding: 20px;
         display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
-        padding: 50px;
     }
 }
