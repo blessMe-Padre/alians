@@ -8,10 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import Homepage from './routes/HomePage.jsx';
-import About from './routes/About.jsx';
-import Price from './routes/Price.jsx';
-import Contacts from './routes/Contacts.jsx';
+import { Homepage, Contacts, Price, About, ServicePererabotka } from './routes/index.js';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +40,15 @@ const router = createBrowserRouter([
     element: (
       <App>
         <Contacts />
+      </App>
+    ),
+  },
+
+  {
+    path: "/service_pererabotka",
+    element: (
+      <App>
+        <ServicePererabotka />
       </App>
     ),
   },
