@@ -1,0 +1,52 @@
+.section {
+    padding: 60px 0;
+}
+
+.section_wrapper {
+    border-radius: 30px;
+    background-image: url('./map_info/pattern_bg_1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section_wrapper_container {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 30px;
+    padding: 80px;
+}
+
+.section_item {
+    padding-right: 40px;
+    border-right: 1px solid var(--white);
+}
+
+@media (max-width: 1023px) {
+    .section_wrapper_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 50px;
+    }
+
+    .image_wrapper {
+        display: none;
+    }
+
+    .section_item {
+        padding-right: 0;
+        border-right: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .section_wrapper_container {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
