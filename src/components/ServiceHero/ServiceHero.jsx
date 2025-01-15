@@ -8,7 +8,7 @@ export const ServiceHero = ({
     desc = ''
 }) => {
     return (
-        <section>
+        <section className={styles.section}>
             <div className={`relative ${styles.service_wrapper}`}>
                 {video ? (
                     <>
