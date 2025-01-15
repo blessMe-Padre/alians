@@ -4,12 +4,11 @@
 
 .pererabotka_wrapper {
     display: flex;
-    gap: 30px;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .pererabotka_wrapper_content {
-    width: 100%;
     padding: 60px;
 
     border-radius: 20px;
@@ -24,12 +23,14 @@
 }
 
 .item_desc {
-    color: var(--white);
-    max-width: 440px;
+    font-size: clamp(0.875rem, -0.25rem + 1.25vw, 1.25rem);    color: var(--white);
+    max-width: 550px;
 }
 
 .pererabotka_item {
     display: flex;
+    align-items: start;
+
     gap: 30px;
     
     background-color: rgba(255, 255, 255, .17);
@@ -39,6 +40,79 @@
 }
 
 .pattern {
+    width: 100%;
     border-radius: 20px;
     max-height: 812px;
+}
+
+.me_wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.me_item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    background-color: var(--orange);
+    
+
+    border-radius: 20px;
+}
+
+.img_me {
+    width: 100%;
+
+    border-radius: 20px;
+}
+
+.me_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 30px;
+}
+
+.main_text {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--white);
+}
+
+.desc_text {
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--white);
+}
+
+@media screen and (max-width: 769px) {
+    .pererabotka_wrapper {
+        flex-direction: column;
+    }
+
+    .pererabotka_wrapper_content {
+        padding: 30px;
+    }
+
+    .me_wrapper {
+        flex-direction: column;
+    }
+
+    .me_content {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pererabotka_item {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .me_content {
+        padding: 20px;
+    }
 }

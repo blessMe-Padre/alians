@@ -3,7 +3,7 @@ import styles from "../styles/homepage.module.css";
 import { Helmet } from "react-helmet";
 
 
-import { MapInfo, Faq, HowWeWork, HaveQuestion, GetCost, Cost } from "../sections";
+import { MapInfo, Faq, HowWeWork, HaveQuestion, GetCost } from "../sections";
 import Button from "./../components/Button/Button";
 
 

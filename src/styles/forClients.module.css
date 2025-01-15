@@ -1,0 +1,19 @@
+
+.section {
+    padding: 60px 0;
+}
+
+
+.content {
+    max-width: 900px;
+    color: var(--toggle-color);
+    font-size: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .section div.container {
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+
+}

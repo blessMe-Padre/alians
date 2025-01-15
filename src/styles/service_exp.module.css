@@ -1,0 +1,137 @@
+
+.section {
+    padding: 60px 0;
+}
+
+.complex_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.item {
+    padding: 100px 60px;
+    color: var(--white);
+    border-radius: 20px;
+}
+.complex_list {
+    max-width: 450px;
+    list-style:inside;
+}
+
+.bg_complex {
+    background-image: url('../service/bg_complex.png');
+}
+
+.coplex_item:first-child {
+    padding: 20px 0 0px 30px;
+}
+
+.coplex_item {
+    padding-left: 30px;
+}
+
+.img_complex {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.why_wrapper {
+    display: grid;
+    gap: 30px;;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.why_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    padding: 30px;
+
+    background-color: var(--white);
+
+    border-radius: 20px;
+}
+
+.why_title {
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--blue);
+
+}
+
+@media screen and (max-width: 769px) {
+    .complex_wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .coplex_item:first-child {
+        padding: 10px 0 5px 5px;
+    }
+    .coplex_item {
+        padding: 5px;
+    }
+
+    .item {
+        padding: 30px;
+    }
+
+    .why_wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .why_title {
+        font-size: 22px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .section {
+        padding: 30px 0;
+    }
+
+    .img_complex {
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    .why_title {
+        font-size: 18px;
+    }
+
+    .why_item {
+        justify-content: start;
+        gap: 15px;
+
+        padding: 20px;
+
+        background-color: var(--white);
+
+        border-radius: 20px;
+    }
+
+    .why_icon {
+        scale: 0.7;
+    }
+
+    .section div.container {
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 320px) {
+    .why_item {
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .why_title {
+        font-size: 14px;
+    }
+}
