@@ -5,3 +5,4 @@ export { default as Price } from './Price';
 export { default as ServicePererabotka } from './ServicePererabotka';
 export { default as ServiceTransport } from './ServiceTransport';
 export { default as ServiceExpedition } from './ServiceExpedition';
+export { default as Postavchiki } from './Postavchiki';

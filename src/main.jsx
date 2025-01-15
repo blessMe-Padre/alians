@@ -8,7 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import { Homepage, Contacts, Price, About, ServicePererabotka, ServiceTransport, ServiceExpedition } from './routes/index.js';
+import { Homepage, Contacts, Price, About, ServicePererabotka, ServiceTransport, ServiceExpedition, Postavchiki } from './routes/index.js';
 
 const router = createBrowserRouter([
   {
@@ -67,6 +67,15 @@ const router = createBrowserRouter([
     element: (
       <App>
         <ServiceExpedition />
+      </App>
+    ),
+  },
+
+  {
+    path: "/postavchiki",
+    element: (
+      <App>
+        <Postavchiki />
       </App>
     ),
   },
