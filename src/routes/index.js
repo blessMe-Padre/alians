@@ -6,3 +6,5 @@ export { default as ServicePererabotka } from './ServicePererabotka';
 export { default as ServiceTransport } from './ServiceTransport';
 export { default as ServiceExpedition } from './ServiceExpedition';
 export { default as Postavchiki } from './Postavchiki';
+export { default as ForClients } from './ForClients';
+export { default as ForWorkers } from './ForWorkers';
