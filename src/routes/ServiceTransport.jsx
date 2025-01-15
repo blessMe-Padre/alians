@@ -106,7 +106,7 @@ export default function ServiceTransport() {
                 desc="Имеем большой парк автомобилей для организации погрузки и вывоза лома своими силами."
             />
 
-            <section className={styles.section_first}>
+            <section className={styles.section}>
                 <div className="container">
                     <h2 className="title">Перечень техники ГК «Восточный Альянс»</h2>
                     <ul className={styles.car_list}>

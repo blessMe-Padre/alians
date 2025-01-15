@@ -1,9 +1,3 @@
-.section_first {
-    padding-top: clamp(6.25rem, -31.25rem + 41.6667vw, 18.75rem);
-    padding-bottom: clamp(6.25rem, -31.25rem + 41.6667vw, 18.75rem);
-    padding-right: 0;
-    padding-left: 0;
-}
 
 .section {
     padding: 60px 0;
