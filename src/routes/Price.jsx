@@ -67,6 +67,10 @@ export default function Price() {
                     type: 'Лом нержавейки (10%)',
                     cost: '60 000 ₽ / тонна',
                 },
+                {
+                    type: '',
+                    cost: '',
+                },
                
             ]
         },
@@ -121,7 +125,7 @@ export default function Price() {
                                 
                                     {item.data.map((subItem, idx) => {
                                         return (
-                                            <tr key = { idx } className = {`${styles.row} ${idx % 2 ? styles.bg_row_gray : styles.bg_row_white}`}>
+                                            <tr key = { idx } className = {`${styles.row} ${idx % 2 ? styles.bg_row_white : styles.bg_row_gray}`}>
                                                 <td>
                                                     {subItem.type}
                                                 </td>

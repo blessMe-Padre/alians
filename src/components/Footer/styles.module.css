@@ -70,13 +70,19 @@
 }
 
 .pages_list > * {
+    color: var(--white);
     margin-bottom: 20px;
 }
 
 .service_link {
+    color: var(--white);
     margin-bottom: 25px;
     max-width: 400px;
 
+}
+
+.policy {
+    color: var(--white);
 }
 
 @media screen and (max-width: 480px) {

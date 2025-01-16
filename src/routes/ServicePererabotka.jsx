@@ -47,8 +47,8 @@ export default function ServicePererabotka() {
             />
 
             <section className={styles.section}>
-                <div className="page-wrapper">
-                    <h2 className="title toggle-color center">Комплексная переработка <br /> металлолома</h2>
+                <div className={`${styles.page_wrapper} page-wrapper`}>
+                    <h2 className="title toggle_color center">Комплексная переработка <br /> металлолома</h2>
 
                     <div className={styles.pererabotka_wrapper}>
                         
@@ -85,8 +85,8 @@ export default function ServicePererabotka() {
             </section>
 
             <section className={styles.section}>
-                <div className="container">
-                    <h2 className="title toggle-color center">Металлы, какие они бывают?</h2>
+                <div className={`${styles.container} container`}>
+                    <h2 className="title toggle_color center">Металлы, какие они бывают?</h2>
 
                     <div className={styles.me_wrapper}>
                         <div className={styles.me_item}>

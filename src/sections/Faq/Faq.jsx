@@ -102,6 +102,7 @@ const Faq = () => {
                         ))}
                     </ul>
 
+                    
                     <img src={faq_bg} className={styles.faq_bg} alt='' />
                 </div>
             </div>

@@ -33,6 +33,7 @@
 }
 
 .item_title {
+    color: var(--white);
     font-size: 28px;
     font-weight: 700;
 }
@@ -57,11 +58,13 @@
 
 
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1024px) {
     .post_wrapper {
         grid-template-columns: repeat(1, 1fr);
     }
+}
 
+@media screen and (max-width: 769px) {
     .post_wrapper_content {
         padding: 30px;
     }
@@ -71,6 +74,10 @@
     .post_item {
         flex-direction: column;
         gap: 15px;
+    }
+
+    .section {
+        padding: 30px 0;
     }
 
      .post_wrapper {

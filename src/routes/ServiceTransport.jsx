@@ -30,10 +30,9 @@ export default function ServiceTransport() {
 
     let src;
 
-    if (screenWidth >= 1440) {
+    if (screenWidth >= 1024) {
         src = our_1;
-
-    } else if (screenWidth >= 769) {
+    } else if (screenWidth < 1024 && screenWidth > 480) {
         src = our_2
     } else {
         src = our_3
@@ -109,7 +108,7 @@ export default function ServiceTransport() {
 
             <section className={styles.section}>
                 <div className={`${styles.container} container`}>
-                    <h2 className="title">Перечень техники ГК «Восточный Альянс»</h2>
+                    <h2 className="title toggle_color center">Перечень техники ГК «Восточный Альянс»</h2>
                     <ul className={styles.car_list}>
                         {data.map((item, idx) => {
                             return (

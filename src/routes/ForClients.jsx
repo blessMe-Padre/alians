@@ -8,7 +8,7 @@ export default function ForClients() {
     return (
         <>
             <Helmet>
-                <title>для поставщиков</title>
+                <title>Поставщикам</title>
                 <meta name="description" content="Описание вашей компании, услуг и уникальных преимуществ." />
                 <meta name="keywords" content="компания, услуги, преимущества, о нас" />
 

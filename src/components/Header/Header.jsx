@@ -55,7 +55,7 @@ export default function Header() {
                                     </div>
                                 </Link>
                                 <ul className={styles.submenu}>
-                                    <li><Link className={styles.link} to="/postavchiki">для поставщиков</Link></li>
+                                    <li><Link className={styles.link} to="/postavchiki">Поставщикам</Link></li>
                                     <li><Link className={styles.link} to="/for_clients">для клиентов</Link></li>
                                     <li><Link className={styles.link} to="/for_workers">для сотрудников</Link></li>
                                 </ul>
@@ -101,6 +101,12 @@ export default function Header() {
                         <li><Link onClick={handleOpenedClick} className={styles.link} to="/">Главная</Link></li>
                         <li><Link onClick={handleOpenedClick} className={styles.link} to="/about">О нас</Link></li>
                         <li><Link onClick={handleOpenedClick} className={styles.link} to="/contacts">Контакты</Link></li>
+                        <li><Link onClick={handleOpenedClick} className={styles.link} to="/service_pererabotka">Заготовка и переработка лома и отходов черных и цветных металлов</Link></li>
+                        <li><Link onClick={handleOpenedClick} className={styles.link} to="/service_transport">Транспортные услуги</Link></li>
+                        <li><Link onClick={handleOpenedClick} className={styles.link} to="/service_expedition">Услуги внутрипортовой транспортной экспедиции при организации международной перевозки грузов</Link></li>
+                        <li><Link onClick={handleOpenedClick} className={styles.link} to="/postavchiki">Поставщикам</Link></li>
+                        <li><Link onClick={handleOpenedClick} className={styles.link} to="/for_clients">Для клиентов</Link></li>
+                        <li><Link onClick={handleOpenedClick} className={styles.link} to="/for_workers">Для сотрудников</Link></li>
                         <li><Link onClick={handleOpenedClick} className={styles.link} to="/price">Цены</Link></li>
                     </ul>
                 </nav>

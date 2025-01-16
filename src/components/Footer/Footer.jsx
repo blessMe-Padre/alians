@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 import logo from '/logo.svg';
 
@@ -11,12 +12,25 @@ export default function Footer() {
         emailLink: 'mailto:info@va.eco'
     };
 
+
     const servicesData = {
         title: "Услуги",
         items: [
-            "Заготовка и переработка лома черных и цветных металлов",
-            "Транспортные услуги",
-            "Демонтаж металлоконструкций",
+            {
+                link: '/service_pererabotka',
+                title: "Заготовка и переработка лома черных и цветных металлов",
+            },
+
+            {
+                link: '/service_transport',
+                title: "Транспортные услуги",
+            },
+
+            {
+                link: '/service_expedition',
+                title: "Услуги внутрипортовой транспортной экспедиции при организации международной перевозки грузов",
+            }
+            
         ]
     };
 
@@ -24,12 +38,35 @@ export default function Footer() {
     const pagesData = {
         title: "Для вас",
         items: [
-            "О компании",
-            "Поставщикам",
-            "Клиентам",
-            "Сотрудникам",
-            "Цены",
-            "Контакты",
+            {
+                link: '/about',
+                title: "О компании",
+            },
+            
+            {
+                link: '/postavchiki',
+                title: "Поставщикам",
+            },
+
+            {
+                link: '/for_clients',
+                title: "Клиентам",
+            },
+
+            {
+                link: '/for_workers',
+                title: "Сотрудникам",
+            },
+
+            {
+                link: '/price',
+                title: "Цены",
+            },
+           
+            {
+                link: '/contacts',
+                title: "Контакты",
+            },
         ]
     };
     
@@ -50,7 +87,7 @@ export default function Footer() {
                             <p className={styles.title_footer}>{servicesData.title}</p>
                             {servicesData.items.map((item, index) => (
                                 <li key={index} className={styles.service_link}>
-                                    {item}
+                                    <Link to={item.link}>{item.title}</Link>
                                 </li>
                              ))}
                         </ul>
@@ -60,7 +97,7 @@ export default function Footer() {
                             <ul className={styles.pages_list}>
                                 {pagesData.items.map((item, index) => (
                                     <li key={index}>
-                                        {item}
+                                        <Link to={item.link}>{item.title}</Link>
                                     </li>
                                 ))}
                             </ul>

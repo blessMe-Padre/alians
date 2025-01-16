@@ -42,7 +42,7 @@ export default function About() {
 
             <section className={styles.section}>
                 <div className={`${styles.container} container`}>
-                    <h2 className="title toggle-color center">О нас</h2>
+                    <h2 className="title toggle_color center">О нас</h2>
 
                     <div className={styles.ab_wrapper}>
                         <div className={styles.ab_item}>
