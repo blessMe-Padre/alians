@@ -11,6 +11,8 @@ import per_2 from '/service/per_2.svg';
 import per_3 from '/service/per_3.svg';
 
 import { ServiceHero } from "../components/index";
+
+import { GetCost } from "../sections";
 export default function ServicePererabotka() {
     return (
         <>
@@ -64,14 +66,14 @@ export default function ServicePererabotka() {
                                 </li>
 
                                 <li className={styles.pererabotka_item}>
-                                    <img src={per_1} alt="" className="" />
+                                    <img src={per_2} alt="" className="" />
                                     <p className={styles.item_desc}>
                                         Процесс переработки лома включает в себя сортировку, измельчение, очистку с последующим прессованием его в брикеты. Недостаточная эффективность технологий, нарушение требований к переработке – это одна из проблем, стоящих перед компаниями. На нашем предприятии используется современное оборудование для сортировки лома, у сотрудников, осуществляющих приемку, имеются все разрешительные документы для безопасной переработки лома.   
                                     </p>
                                 </li>
 
                                 <li className={styles.pererabotka_item}>
-                                    <img src={per_1} alt="" className="" />
+                                    <img src={per_3} alt="" className="" />
                                     <p className={styles.item_desc}>
                                         Мы предоставляем Вам контейнер с открытым верхом под накопление лома и отходов. В процессе осуществления деятельности все металлические отходы будут складироваться в него. После наполнения (15-20 тонн), мы привозим порожний и забираем наполненный контейнер. Автомобиль самостоятельно выгружает и загружает контейнеры на прицеп, тем самым экономя Ваше время и деньги. 
                                     </p>
@@ -81,6 +83,42 @@ export default function ServicePererabotka() {
                     </div>
                 </div>
             </section>
+
+            <section className={styles.section}>
+                <div className="container">
+                    <h2 className="title toggle-color center">Металлы, какие они бывают?</h2>
+
+                    <div className={styles.me_wrapper}>
+                        <div className={styles.me_item}>
+                            <img src={mettals_1} alt='' className={styles.img_me} />
+                            <div className={styles.me_content}>
+                                <p className={styles.main_text}>
+                                    Чёрные
+                                </p>
+                                <p className={styles.desc_text}>
+                                    Железо и сплавы на его основе. Это группа, включающая железо, сталь и чугун. Эти металлы склонны к окислению и образованию черной корки на поверхности при воздействии агрессивных сред, обладающие высокой прочностью и устойчивостью к износу. Это делает их идеальными для использования в строительстве, металлургической промышленности и многих других отраслях.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className={styles.me_item}>
+                            <img src={mettals_2} alt='' className={styles.img_me} />
+
+                            <div className={styles.me_content}>
+                                <p className={styles.main_text}>
+                                    Чёрные
+                                </p>
+                                <p className={styles.desc_text}>
+                                    Железо и сплавы на его основе. Это группа, включающая железо, сталь и чугун. Эти металлы склонны к окислению и образованию черной корки на поверхности при воздействии агрессивных сред, обладающие высокой прочностью и устойчивостью к износу. Это делает их идеальными для использования в строительстве, металлургической промышленности и многих других отраслях.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <GetCost />
 
         </>
     )

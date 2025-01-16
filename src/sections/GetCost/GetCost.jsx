@@ -16,7 +16,7 @@ const HaveQuestion = () => {
                     </div>
 
                     <div className={`${styles.image_wrapper} image-wrapper`}>
-                        <img src="./content/image-7.webp" width={475} height={431} alt="image" />
+                        <img src="../content/image-7.webp" width={475} height={431} alt="image" />
                     </div>
                 </div>
             </div>
