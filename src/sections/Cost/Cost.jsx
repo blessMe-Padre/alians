@@ -29,23 +29,25 @@ const Cost = () => {
         }
 
         try {
-            const avatarIds = items.map((item) => item?.avatar).filter(Boolean);
+            const avatarIds = items
+                .flatMap((post) => post.acf?.item?.map((item) => item?.avatar))
+                .filter(Boolean);
+
             if (avatarIds.length === 0) {
                 console.error("ID аватаров не найдены");
                 return;
             }
 
-            // Загружаем данные для каждого аватара
             const imageRequests = avatarIds.map((id) =>
                 axios.get(`https://api.va.eco/wp-json/wp/v2/media/${id}`)
             );
 
             const responses = await Promise.all(imageRequests);
-            const images = responses.map((res) => res.data.source_url); // Извлекаем URL всех изображений
+            const images = responses.map((res) => res.data.source_url);
 
-            setFeaturedImage(images); // Сохраняем массив URL изображений
+            setFeaturedImage(images);
         } catch (error) {
-            console.error("Ошибка при получении изображений:", error);
+            console.error("Ошибка при получении изображений:", error.message || error);
         }
     };
 
@@ -54,9 +56,11 @@ const Cost = () => {
             setIsLoading(true);
             try {
                 const product = await getPosts();
+
                 if (product) {
-                    setPosts(product);
-                    // getPostImages(product);
+                    const reordered = [product[1], product[0]];
+                    setPosts(reordered);
+                    await getPostImages(reordered);
                 }
             } catch (error) {
                 console.error("Ошибка при загрузке постов:", error);
@@ -96,24 +100,39 @@ const Cost = () => {
                         <div>Тип лома</div>
                         <div className={styles.table_header_cost}>Цена/тонна</div>
                     </div>
-                    {/* {post[active] && (
+
+                    {posts[active] && posts[active].acf?.item?.length > 0 && (
                         <ul className={styles.table_list}>
-                            {post[active].map((item, index) => (
+                            {posts[active].acf.item.map((item, index) => (
+
                                 <li
                                     className={styles.table_item}
                                     key={index}>
                                     <div className={styles.table_item_inner}>
-                                        <img src={item.image} alt="image" width={70} height={70} />
-                                        <p>{item.type}</p>
+                                        {Array.isArray(featuredImage) && featuredImage[index] ? (
+                                            <img
+                                                src={featuredImage[index]}
+                                                alt={"Изображение"}
+                                                width={70}
+                                                height={70}
+                                            />
+                                        ) : (
+                                            <img
+                                                src="loading.gif"
+                                                alt="Загрузка..."
+                                                width={70}
+                                                height={70}
+                                            />
+                                        )}
+                                        <p>{item.title}</p>
                                     </div>
                                     <p><strong>{item.cost}</strong></p>
                                 </li>
                             ))}
                         </ul>
-                    )} */}
+                    )}
 
                     <p className={styles.table_text}>*В связи с нестабильностью рынка, просим уточнять актуальные цены на лом у наших менеджеров по номеру телефона, указанному в контактах.</p>
-
 
                 </div>
             </div>
