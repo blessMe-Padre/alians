@@ -2,7 +2,6 @@ import axios from "axios";
 import { useState, useEffect } from 'react';
 import styles from './style.module.css';
 
-
 const items = [
     {
         title: 'Черный лом',
@@ -53,47 +52,64 @@ const Cost = () => {
     const [featuredImage, setFeaturedImage] = useState();
 
     const openTab = e => setActive(+e.target.dataset.index);
-
     const apiBaseUrl = "https://api.va.eco/wp-json/wp/v2/posts/7";
 
     const getPost = async () => {
         try {
             const response = await axios.get(apiBaseUrl);
-            return response.data;
+            return response.data.acf.item;
         } catch (error) {
             console.error("Ошибка при получении поста:", error);
             throw error;
         }
     };
 
-    const getPostImage = () => {
-        axios
-            .get(post?._links["wp:featuredmedia"][0]?.href)
-            .then((res) => {
-                setFeaturedImage(res.data.source_url);
-            })
-            .catch((error) => {
-                console.error('Error fetching posts:', error);
-            });
-    }
+    // Функция для получения всех изображений из массива post.acf.item
+    const getPostImages = async (items) => {
+        if (!items || !Array.isArray(items) || items.length === 0) {
+            console.error("Массив items пустой или не существует");
+            return;
+        }
+
+        try {
+            const avatarIds = items.map((item) => item?.avatar).filter(Boolean);
+            if (avatarIds.length === 0) {
+                console.error("ID аватаров не найдены");
+                return;
+            }
+
+            // Загружаем данные для каждого аватара
+            const imageRequests = avatarIds.map((id) =>
+                axios.get(`https://api.va.eco/wp-json/wp/v2/media/${id}`)
+            );
+
+            const responses = await Promise.all(imageRequests);
+            const images = responses.map((res) => res.data.source_url); // Извлекаем URL всех изображений
+
+            setFeaturedImage(images); // Сохраняем массив URL изображений
+        } catch (error) {
+            console.error("Ошибка при получении изображений:", error);
+        }
+    };
 
     useEffect(() => {
         const fetchProducts = async () => {
             setIsLoading(true);
             try {
                 const product = await getPost();
-                if (product != 0) {
-                    setIsLoading(false);
+                if (product) {
                     setPost(product);
-                    getPostImage();
+                    getPostImages(product);
                 }
             } catch (error) {
-                console.error("Error fetching products:", error);
+                console.error("Ошибка при загрузке постов:", error);
+            } finally {
+                setIsLoading(false);
             }
-        }
+        };
 
         fetchProducts();
-    }, []);
+    }, []); //
 
 
     return (
