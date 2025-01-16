@@ -3,33 +3,29 @@
 }
 
 .section_wrapper {
-    border-radius: 30px;
-    background-image: url('../map_info/pattern_bg_1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.section_wrapper_container {
-    max-width: 1440px;
-    margin: 0 auto;
-
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 60% 37.5%;
     gap: 30px;
-    padding: 80px;
 }
 
 .section_item {
-    padding-right: 40px;
-    border-right: 1px solid var(--white);
+    border-radius: 20px;
+    background-image: url('../map_info/pattern_bg_1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 30px;
+}
+
+.section_item .main-form {
+    margin-left: auto;
 }
 
 @media (max-width: 1023px) {
-    .section_wrapper_container {
+    .section_wrapper {
         display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
-        padding: 50px;
+        padding: 0;
     }
 
     .image_wrapper {
@@ -37,16 +33,13 @@
     }
 
     .section_item {
-        padding-right: 0;
+        padding: 30px 20px;
         border-right: none;
     }
 }
 
 @media (max-width: 560px) {
-    .section_wrapper_container {
-        padding: 20px;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .section {
+        padding: 30px 0;
     }
 }

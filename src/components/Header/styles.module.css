@@ -3,6 +3,7 @@
     border-radius: 20px;
     padding: 20px 0;
     position: relative;
+    margin-top: 30px;
 }
 
 .header_wrapper {
@@ -104,6 +105,11 @@
     font-size: 18px;
     letter-spacing: 0.02em;
     color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.header_link:hover {
+    color: var(--orange);
 }
 
 .header_whatsapp {

@@ -24,7 +24,7 @@ const HowWeWork = () => {
         {
             'title': 'Оплата',
             'desc': 'Взвешивание лома и моментальная оплата',
-            'icon': '/icons/pay.svg',            
+            'icon': '/icons/pay.svg',
         }
     ]
 
@@ -34,7 +34,7 @@ const HowWeWork = () => {
     return (
         <section className={styles.section}>
             <div className={`${styles.container} container`}>
-                <h2 className='title center'>Как мы работаем</h2>
+                <h2 className='title center toggle_color'>Как мы работаем</h2>
 
                 <ul className={styles.how_we_work_list}>
                     {data.map((item, idx) => {

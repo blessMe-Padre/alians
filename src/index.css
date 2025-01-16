@@ -102,7 +102,7 @@ a {
   font-family: 'Proxima Nova';
   color: var(--blue);
   font-weight: 800;
-  line-height: 66px;
+  line-height: 1.2;
   font-size: clamp(1.875rem, 1.3393rem + 2.6786vw, 3.75rem);
   text-transform: uppercase;
   margin-bottom: 50px;
@@ -193,6 +193,7 @@ a {
 
 .main-form {
   max-width: 690px;
+  margin: 0 auto;
 }
 
 /* фикс кривых контейнеров */

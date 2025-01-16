@@ -2,7 +2,6 @@ import styles from "../styles/homepage.module.css";
 
 import { Helmet } from "react-helmet";
 
-
 import { MapInfo, Faq, HowWeWork, HaveQuestion, GetCost, Cost } from "../sections";
 import Button from "./../components/Button/Button";
 
@@ -139,18 +138,12 @@ export default function HomePage() {
                 </div>
             </section>
 
+            <GetCost />
             <HowWeWork />
+            <Cost />
             <Faq />
             <HaveQuestion />
-            <GetCost />
-            <Cost />
-
-
-
             <MapInfo pattern={1} />
-
-
-
         </>
     )
 }

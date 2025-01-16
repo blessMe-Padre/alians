@@ -66,12 +66,14 @@
     bottom: 0;
     font-weight: 700;
     font-size: 120px;
+    color: var(--white);
 }
 
 @media screen and (max-width: 769px) {
     .how_we_work_list {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .section {
         padding: 40px 0;
     }
@@ -86,6 +88,7 @@
         margin-left: -20px;
         margin-right: -20px;
     }
+
     .how_we_work_list {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
