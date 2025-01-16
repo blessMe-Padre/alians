@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState, useEffect } from 'react';
 import styles from './style.module.css';
 
@@ -47,7 +48,53 @@ const items = [
 
 const Cost = () => {
     const [active, setActive] = useState(0);
+    const [isLoading, setIsLoading] = useState(false);
+    const [post, setPost] = useState([]);
+    const [featuredImage, setFeaturedImage] = useState();
+
     const openTab = e => setActive(+e.target.dataset.index);
+
+    const apiBaseUrl = "https://api.va.eco/wp-json/wp/v2/posts/7";
+
+    const getPost = async () => {
+        try {
+            const response = await axios.get(apiBaseUrl);
+            return response.data;
+        } catch (error) {
+            console.error("Ошибка при получении поста:", error);
+            throw error;
+        }
+    };
+
+    const getPostImage = () => {
+        axios
+            .get(post?._links["wp:featuredmedia"][0]?.href)
+            .then((res) => {
+                setFeaturedImage(res.data.source_url);
+            })
+            .catch((error) => {
+                console.error('Error fetching posts:', error);
+            });
+    }
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            setIsLoading(true);
+            try {
+                const product = await getPost();
+                if (product != 0) {
+                    setIsLoading(false);
+                    setPost(product);
+                    getPostImage();
+                }
+            } catch (error) {
+                console.error("Error fetching products:", error);
+            }
+        }
+
+        fetchProducts();
+    }, []);
+
 
     return (
         <section className={styles.section}>
