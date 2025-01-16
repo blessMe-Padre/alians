@@ -36,6 +36,9 @@
     border-radius: 20px;
     background-position: center;
     object-fit: contain;
+    background-repeat: no-repeat;
+    height: 75vh;
+    
 }
 
 .heroImage {

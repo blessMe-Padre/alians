@@ -33,6 +33,7 @@
 }
 
 .item_title {
+    color: var(--white);
     font-size: 28px;
     font-weight: 700;
 }
@@ -71,6 +72,10 @@
     .post_item {
         flex-direction: column;
         gap: 15px;
+    }
+
+    .section {
+        padding: 30px 0;
     }
 
      .post_wrapper {

@@ -8,7 +8,7 @@ export default function ForClients() {
     return (
         <>
             <Helmet>
-                <title>для поставщиков</title>
+                <title>Поставщикам</title>
                 <meta name="description" content="Описание вашей компании, услуг и уникальных преимуществ." />
                 <meta name="keywords" content="компания, услуги, преимущества, о нас" />
 
@@ -39,7 +39,7 @@ export default function ForClients() {
 
             <section className={styles.section}>
                 <div className="container">
-                    <h2 className="title_blue toggle_color">для сотрудников</h2>
+                    <h2 className="title_blue toggle_color">Сотрудникам</h2>
                 
                     <div className={styles.content}>
                         <p>

@@ -108,7 +108,7 @@ export default function ServiceTransport() {
 
             <section className={styles.section}>
                 <div className={`${styles.container} container`}>
-                    <h2 className="title">Перечень техники ГК «Восточный Альянс»</h2>
+                    <h2 className="title toggle_color center">Перечень техники ГК «Восточный Альянс»</h2>
                     <ul className={styles.car_list}>
                         {data.map((item, idx) => {
                             return (
