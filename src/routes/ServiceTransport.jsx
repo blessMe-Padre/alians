@@ -15,28 +15,29 @@ import { GetCost } from "../sections";
 export default function ServiceTransport() {
 
     const [screenWidth, setScreenWidth] = useState(0);
-        
+
     useEffect(() => {
         const handleResize = () => {
             setScreenWidth(window.innerWidth);
         };
-            handleResize();
-            window.addEventListener('resize', handleResize);
+        handleResize();
+        window.addEventListener('resize', handleResize);
 
-            return () => {
+        return () => {
             window.removeEventListener('resize', handleResize);
-            };
+        };
     }, []);
-    
-        let src;
 
-        if(screenWidth >= 1440){
-            src = our_1;
-        } else if(screenWidth >= 769){
-            src = our_2
-        } else {
-            src = our_3
-        }
+    let src;
+
+    if (screenWidth >= 1440) {
+        src = our_1;
+
+    } else if (screenWidth >= 769) {
+        src = our_2
+    } else {
+        src = our_3
+    }
 
     const data = [
         {
@@ -48,12 +49,12 @@ export default function ServiceTransport() {
             'content': 'Самосвалы с прицепами общей грузоподьемностью 25 тонн, оборудованные грейферными  установками грузоподъемностью 1,5,3 тонны',
             'img': '../service/car_2.png',
         },
-         
+
         {
             'content': 'Экскаваторы массой от 28 до 40 тонн, оборудованные гидравлическими ножницами, грейферными захватами, ковшами',
             'img': '../service/car_3.png',
         },
-          
+
         {
             'content': 'Седельные тягачи (контейнеровозы, ломовозы опен топ) грузоподъемностью 25 тонн',
             'img': '../service/car_4.png',
@@ -113,7 +114,9 @@ export default function ServiceTransport() {
                         {data.map((item, idx) => {
                             return (
                                 <li key={idx} className={styles.item}>
-                                    <img src={item.img} alt="" className={styles.item_img} />
+                                    <div className="image-wrapper">
+                                        <img src={item.img} alt="" className={styles.item_img} />
+                                    </div>
                                     <p className={styles.item_content}>
                                         {item.content}
                                     </p>
@@ -126,7 +129,7 @@ export default function ServiceTransport() {
 
             <section className={styles.section}>
                 <div className={`${styles.page_wrapper} page-wrapper`}>
-                    <img src={src} className={styles.img_item} alt="" />
+                    <img src={src} className={styles.img_item} width={1880} height={551} alt="" />
                 </div>
             </section>
 

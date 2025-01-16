@@ -1,18 +1,13 @@
-
 .section {
     padding: 60px 0;
 }
 
 .car_list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
 }
 
-.car_list > .item:nth-child(n + 4) {
-    grid-row: span 2;
-
-}
 .item {
     width: 100%;
     display: flex;
@@ -21,6 +16,11 @@
     border-radius: 20px;
     background-color: var(--orange);
 
+    grid-column: span 2;
+}
+
+.car_list>.item:nth-child(n + 4) {
+    grid-column: span 3;
 }
 
 .item_content {
@@ -28,11 +28,24 @@
     padding: 20px;
 }
 
-.item_img, .img_item {
+.item_img {
     width: 100%;
     border-radius: 20px;
 }
 
+@media screen and (max-width: 1023px) {
+    .car_list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .car_list .item {
+        grid-column: span 1;
+    }
+
+    .car_list .item:nth-child(n + 4) {
+        grid-column: span 1;
+    }
+}
 
 @media screen and (max-width: 769px) {
     .car_list {
@@ -58,7 +71,8 @@
         padding: 30px 0;
     }
 
-    .section div.container, .section div.page_wrapper {
+    .section div.container,
+    .section div.page_wrapper {
         margin-right: -20px;
         margin-left: -20px;
     }
