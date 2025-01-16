@@ -69,13 +69,23 @@
     color: var(--white);
 }
 
-@media screen and (max-width: 769px) {
-    .how_we_work_list {
+@media screen and (max-width: 1024px) {
+  .how_we_work_list {
         grid-template-columns: repeat(2, 1fr);
     }
+}
 
+
+@media screen and (max-width: 769px) {
     .section {
         padding: 40px 0;
+    }
+}
+
+
+@media screen and (max-width: 680px) {
+  .how_we_work_list {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 

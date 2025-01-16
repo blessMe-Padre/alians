@@ -30,10 +30,9 @@ export default function ServiceTransport() {
 
     let src;
 
-    if (screenWidth >= 1440) {
+    if (screenWidth >= 1024) {
         src = our_1;
-
-    } else if (screenWidth >= 769) {
+    } else if (screenWidth < 1024 && screenWidth > 480) {
         src = our_2
     } else {
         src = our_3

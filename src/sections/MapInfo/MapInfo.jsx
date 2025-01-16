@@ -74,7 +74,7 @@ const MapInfo = ({ pattern }) => {
 
     return (
         <section className={styles.section}>
-            <div className='page-wrapper relative'>
+            <div className='relative'>
                 <img src={src} className={styles.background} alt='' />
                 <div className={styles.content_wrapper}>
                     <h2 className='title title_mobile_blue'>

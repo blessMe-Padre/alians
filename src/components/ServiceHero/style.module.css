@@ -52,13 +52,21 @@
     }
 
     .service_content {
-        padding-top: 100px;
+        padding-top: 60px;
+    }
+
+    .service_desc {
+        font-size: 14px;
+        margin-top: -30px;
     }
 
     .heroImage {
         width: auto;
         min-height: auto;
-        }
+    }
+    .bg {
+        max-height: 370px;
+    }
     
 
 }

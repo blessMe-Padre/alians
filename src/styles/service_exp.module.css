@@ -63,6 +63,14 @@
 
 }
 
+@media screen and (max-width: 1060px) {
+    .why_wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
 @media screen and (max-width: 769px) {
     .complex_wrapper {
         grid-template-columns: repeat(1, 1fr);

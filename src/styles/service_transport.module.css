@@ -33,6 +33,12 @@
     border-radius: 20px;
 }
 
+.img_item {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
 @media screen and (max-width: 1023px) {
     .car_list {
         grid-template-columns: repeat(2, 1fr);
@@ -55,6 +61,13 @@
     .car_list .item:nth-child(n + 4) {
         grid-column: span 1;
         grid-row: span 1;
+    }
+}
+
+
+@media screen and (max-width: 580px) {
+    .car_list {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
