@@ -72,7 +72,7 @@ export default function Form({ title, subtitle, color = "#2a3a57", background = 
     return (
         <>
             <form onSubmit={handleSubmit} className="main-form">
-                <h2 className={styles.title}>{title}</h2>
+                <h2 className={styles.title} style={{ color: color }}>{title}</h2>
                 <p
                     className={styles.text}
                     style={{ color: color }}

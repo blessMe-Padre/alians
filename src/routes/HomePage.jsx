@@ -1,12 +1,17 @@
+import { useState } from "react";
 import styles from "../styles/homepage.module.css";
-
 import { Helmet } from "react-helmet";
 
 import { MapInfo, Faq, HowWeWork, HaveQuestion, GetCost, Cost } from "../sections";
 import Button from "./../components/Button/Button";
+import Popup from "./../components/Popup/Popup";
 
 
 export default function HomePage() {
+    const [popupActive, setPopupActive] = useState(false);
+    const handleClick = () => {
+        setPopupActive(true);
+    }
     return (
         <>
             <Helmet>
@@ -32,6 +37,7 @@ export default function HomePage() {
                 <meta name="robots" content="index, follow" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Helmet>
+            <Popup active={popupActive} setActive={setPopupActive} />
 
             <section className={`${styles.hero} hero`}>
                 <div className={styles.hero_bg_wrapper}>
@@ -41,6 +47,7 @@ export default function HomePage() {
                         <p className={styles.hero_text}>Железная надежность, железная выгода...</p>
                         <h1 className={styles.hero_title}>Переработка лома черных и цветных металлов</h1>
                         <Button
+                            handleClick={handleClick}
                             href="#popup"
                             text="Получить оценку металлолома"
                         />
