@@ -107,7 +107,7 @@ export default function ServiceTransport() {
             />
 
             <section className={styles.section}>
-                <div className="container">
+                <div className={`${styles.container} container`}>
                     <h2 className="title">Перечень техники ГК «Восточный Альянс»</h2>
                     <ul className={styles.car_list}>
                         {data.map((item, idx) => {
@@ -125,7 +125,7 @@ export default function ServiceTransport() {
             </section>
 
             <section className={styles.section}>
-                <div className="page-wrapper">
+                <div className={`${styles.page_wrapper} page-wrapper`}>
                     <img src={src} className={styles.img_item} alt="" />
                 </div>
             </section>

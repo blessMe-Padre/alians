@@ -34,18 +34,34 @@ export default function Header() {
                     <nav className={styles.nav}>
                         <ul>
                             <li className={styles.nav_li}>
-                                <Link className={styles.link} to="/about">
+                                <Link className={styles.link} to="/">
                                     <div className={styles.link_wrapper}>
-                                        <span>О нас</span>
+                                        <span>Услуги</span>
                                         <img className={styles.link_img} src={Down} />
                                     </div>
                                 </Link>
                                 <ul className={styles.submenu}>
-                                    <li><Link className={styles.link} to="/about">О нас1</Link></li>
-                                    <li><Link className={styles.link} to="/about">О нас2</Link></li>
-                                    <li><Link className={styles.link} to="/about">О нас3</Link></li>
+                                    <li><Link className={styles.link} to="/service_pererabotka">Заготовка и переработка лома и отходов черных и цветных металлов</Link></li>
+                                    <li><Link className={styles.link} to="/service_transport">ТРАНСПОРТНЫЕ УСЛУГИ</Link></li>
+                                    <li><Link className={styles.link} to="/service_expedition">Услуги внутрипортовой транспортной экспедиции при организации международной перевозки грузов</Link></li>
                                 </ul>
                             </li>
+
+                            <li className={styles.nav_li}>
+                                <Link className={styles.link} to="/">
+                                    <div className={styles.link_wrapper}>
+                                        <span>Информация</span>
+                                        <img className={styles.link_img} src={Down} />
+                                    </div>
+                                </Link>
+                                <ul className={styles.submenu}>
+                                    <li><Link className={styles.link} to="/postavchiki">для поставщиков</Link></li>
+                                    <li><Link className={styles.link} to="/for_clients">для клиентов</Link></li>
+                                    <li><Link className={styles.link} to="/for_workers">для сотрудников</Link></li>
+                                </ul>
+                            </li>
+
+                            <li><Link className={styles.link} to="/about">О компании</Link></li>
                             <li><Link className={styles.link} to="/contacts">Контакты</Link></li>
                             <li><Link className={styles.link} to="/price">Цены</Link></li>
                         </ul>

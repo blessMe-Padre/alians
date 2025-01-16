@@ -28,6 +28,7 @@
 }
 
 .item_title {
+    margin-bottom: 10px;
     color: var(--toggle-color);
     font-size: 28px;
     font-weight: 800;
@@ -49,6 +50,10 @@
 
 .bg_row_gray {
     background-color: #F0F2F6;
+}
+
+.bg_row_white {
+    background-color: #fff;
 }
 
 .bg_head_blue {
@@ -83,6 +88,9 @@
         grid-template-columns: repeat(1, 1fr);
         gap: 30px;
     }
+     .section {
+        padding: 30px 0 !important;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -90,6 +98,7 @@
         margin-right: -20px;
         margin-left: -20px;
     } 
+   
     .wrapper {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
