@@ -4,7 +4,7 @@ import pattern_bg_2 from '/public/map_info/pattern_bg_2.png';
 import geo from '/public/icons/geo.svg';
 
 const MapInfo = ({ pattern }) => {
-    
+
     const data = [
         {
             'title': 'Центральный офис',
@@ -37,7 +37,7 @@ const MapInfo = ({ pattern }) => {
             'phone_bot': '+79242491352',
             'email': 'ankor20211@gmail.com'
         },
-        
+
         {
             'title': 'Пункт приема',
             'address': 'Приморский край, городской округ ЗАТО город Фокино, г. Фокино, ул. Заводская, д. 10',
@@ -58,45 +58,45 @@ const MapInfo = ({ pattern }) => {
     ]
 
     let src = '';
-    
+
     console.log(pattern)
 
     switch (pattern) {
         case 1:
             src = pattern_bg
             break;
-        
+
         case 2:
             src = pattern_bg_2
             break;
-         default:
+        default:
             src = '';
             console.error(`Error: invalid pattern: ${pattern}`);
 
-    }    
+    }
 
     return (
         <section className={styles.section}>
             <div className='page-wrapper relative'>
-               <img src={src} className={styles.background} alt='' />
+                <img src={src} className={styles.background} alt='' />
                 <div className={styles.content_wrapper}>
                     <h2 className='title toggle_color title_mobile_blue'>
                         Пункты приема
                     </h2>
 
                     <div className={styles.map_wrapper}>
-                      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0240e239f5d8c368095b6d7c70785ca8fd020bb6effb88ff84b12c5c98efdba4&amp;source=constructor" height="647" frameborder="0"></iframe>
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0240e239f5d8c368095b6d7c70785ca8fd020bb6effb88ff84b12c5c98efdba4&amp;source=constructor" height="647"></iframe>
                     </div>
 
-                    
+
                     <div className={`${styles.contacts_wrapper} box_shadow_main`}>
                         <ul className={styles.contacts_list}>
                             {data.map((item, idx) => (
                                 <li key={idx} className={styles.contacts_item}>
                                     <img src={geo} className={styles.geo_svg} alt='geo' />
                                     <p className={styles.item_title}>{item.title}</p>
-                                    <p className={styles.item_address}>{ item.address}</p>
-                                    <p className={styles.item_phone}><a href={`tel:${item.phone_bot}`}>{ item.phone}</a></p>
+                                    <p className={styles.item_address}>{item.address}</p>
+                                    <p className={styles.item_phone}><a href={`tel:${item.phone_bot}`}>{item.phone}</a></p>
                                     <a className={styles.item_email} href={item.item_email}>{item.email}</a>
                                 </li>
                             ))}
@@ -104,7 +104,7 @@ const MapInfo = ({ pattern }) => {
 
                         <p className={styles.contact_info}>Все приемные пункты работают с 9:00 до 18:00</p>
                     </div>
-                </div> 
+                </div>
             </div>
         </section>
     )

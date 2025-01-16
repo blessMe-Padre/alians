@@ -24,7 +24,7 @@ const Faq = () => {
     }
 
     const handleClick = (index) => {
-        setOpenIndex(openIndex === index? null : index);
+        setOpenIndex(openIndex === index ? null : index);
     }
 
     const data = [
@@ -33,32 +33,31 @@ const Faq = () => {
             'answer': "Какой вид лома можно сдать?"
         },
 
-        {  
-            'question': 'Какой вид лома нельзя сдать??',
-            'answer': "Какой вид лома нельзя сдать??"
+        {
+            'question': 'Какой вид лома нельзя сдать?',
+            'answer': "Какой вид лома нельзя сдать?"
         },
 
         {
-            'question': 'Какой вес лома считается минимальным для сдачи??',
-            'answer': "Какой вес лома считается минимальным для сдачи??"
+            'question': 'Какой вес лома считается минимальным для сдачи?',
+            'answer': "Какой вес лома считается минимальным для сдачи?"
         },
 
         {
-            'question': 'Где узнать точную цену приемки лома металлов на сегодня??',
-            'answer': "Где узнать точную цену приемки лома металлов на сегодня??"
+            'question': 'Где узнать точную цену приемки лома металлов на сегодня?',
+            'answer': "Где узнать точную цену приемки лома металлов на сегодня?"
         },
 
         {
-            'question': 'Что вы делаете с принятым металлоломом??',
-            'answer': "Что вы делаете с принятым металлоломом??"
+            'question': 'Что вы делаете с принятым металлоломом?',
+            'answer': "Что вы делаете с принятым металлоломом?"
         },
 
         {
-            'question': 'Можно ли заказать демонтаж и вывоз лома??',
-            'answer': "Можно ли заказать демонтаж и вывоз лома??"
+            'question': 'Можно ли заказать демонтаж и вывоз лома?',
+            'answer': "Можно ли заказать демонтаж и вывоз лома?"
         }
     ]
-
 
 
     return (
@@ -66,12 +65,12 @@ const Faq = () => {
             <div className={`${styles.container} container`}>
                 <h2 className='title_blue toggle_color center'>ОТВЕТИЛИ НА ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
 
-                
+
                 <div className={styles.content_wrapper}>
-                     <ul className={styles.list}>
+                    <ul className={styles.list}>
                         {data.map((item, index) => (
                             <li
-                                key={item.index}
+                                key={index}
                                 className={`${styles.item} overflow-hidden`}
                             >
                                 <div
