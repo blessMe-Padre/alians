@@ -112,6 +112,11 @@
         gap: 15px;
     }
 
+    .section div.container {
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+
     .me_content {
         padding: 20px;
     }

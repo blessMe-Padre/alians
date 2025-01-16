@@ -38,6 +38,10 @@
     object-fit: contain;
 }
 
+.heroImage {
+    min-height: 600px;
+}
+
 @media screen and (max-width: 480px) {
     .bg_service {
         height: 70vh;
@@ -50,6 +54,8 @@
 
     .heroImage {
         width: auto;
-    }
+        min-height: auto;
+        }
+    
 
 }
