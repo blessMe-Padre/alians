@@ -1,81 +1,114 @@
-import { Helmet } from "react-helmet";
+import axios from "axios";
+import { useState, useEffect } from 'react';
 
+import { Helmet } from "react-helmet";
 import styles from '../styles/price.module.css';
 
 import { ServiceHero } from "../components";
 import { HaveQuestion, Faq } from "../sections";
-export default function Price() {
 
-    const data = [
-        {
-            title: 'Черный лом',
-            data: [
-                {
-                    type: 'Лом марки 3А',
-                    cost: '14 000 ₽ / тонна',
-                },
-                {
-                    type: 'Лом марки 5А',
-                    cost: '11 900 ₽ / тонна',
-                },
-                {
-                    type: 'Лом марки 8А, 9А',
-                    cost: '13 500 ₽ / тонна',
-                },
-                {
-                    type: 'Лом марки 12А',
-                    cost: '11 500 ₽ / тонна',
-                },
-                {
-                    type: 'Лом марки 13А',
-                    cost: '6 500 ₽ / тонна',
-                },
-                {
-                    type: 'Лом марки 13А-1 ',
-                    cost: '12 100 ₽ / тонна',
-                },
-                {
-                    type: 'Стружка, пакетированный лом  ',
-                    cost: 'Не принимаются',
-                },
-            ]
-        },
-        {
-            title: 'Цветной лом',
-            data: [
-                {
-                    type: 'Лом меди  ',
-                    cost: '720 000 ₽ / тонна',
-                },
-                {
-                    type: 'Лом бронзы ',
-                    cost: '525 000 ₽ / тонна',
-                },
-                {
-                    type: 'Лом латуни ',
-                    cost: '425 000 ₽ / тонна',
-                },
-                {
-                    type: 'Лом АКБ',
-                    cost: '58 000 ₽ / тонна',
-                },
-                {
-                    type: 'Лом алюминия',
-                    cost: '130 000 ₽ / тонна',
-                },
-                {
-                    type: 'Лом нержавейки (10%)',
-                    cost: '60 000 ₽ / тонна',
-                },
-                {
-                    type: '',
-                    cost: '',
-                },
-               
-            ]
-        },
-    ];
-    
+export default function Price() {
+    const [posts, setPosts] = useState([]);
+    const apiBaseUrl = "https://api.va.eco/wp-json/wp/v2/posts?include[]=7&include[]=19";
+    console.log(posts);
+
+
+    const getPosts = async () => {
+        try {
+            const response = await axios.get(apiBaseUrl);
+            return response.data;
+        } catch (error) {
+            console.error("Ошибка при получении поста:", error);
+            throw error;
+        }
+    };
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const product = await getPosts();
+
+                if (product) {
+                    const reordered = [product[1], product[0]];
+                    setPosts(reordered);
+                }
+            } catch (error) {
+                console.error("Ошибка при загрузке постов:", error);
+            }
+        };
+
+        fetchProducts();
+    }, []);
+
+    // const data = [
+    //     {
+    //         title: 'Черный лом',
+    //         data: [
+    //             {
+    //                 type: 'Лом марки 3А',
+    //                 cost: '14 000 ₽ / тонна',
+    //             },
+    //             {
+    //                 type: 'Лом марки 5А',
+    //                 cost: '11 900 ₽ / тонна',
+    //             },
+    //             {
+    //                 type: 'Лом марки 8А, 9А',
+    //                 cost: '13 500 ₽ / тонна',
+    //             },
+    //             {
+    //                 type: 'Лом марки 12А',
+    //                 cost: '11 500 ₽ / тонна',
+    //             },
+    //             {
+    //                 type: 'Лом марки 13А',
+    //                 cost: '6 500 ₽ / тонна',
+    //             },
+    //             {
+    //                 type: 'Лом марки 13А-1 ',
+    //                 cost: '12 100 ₽ / тонна',
+    //             },
+    //             {
+    //                 type: 'Стружка, пакетированный лом  ',
+    //                 cost: 'Не принимаются',
+    //             },
+    //         ]
+    //     },
+    //     {
+    //         title: 'Цветной лом',
+    //         data: [
+    //             {
+    //                 type: 'Лом меди  ',
+    //                 cost: '720 000 ₽ / тонна',
+    //             },
+    //             {
+    //                 type: 'Лом бронзы ',
+    //                 cost: '525 000 ₽ / тонна',
+    //             },
+    //             {
+    //                 type: 'Лом латуни ',
+    //                 cost: '425 000 ₽ / тонна',
+    //             },
+    //             {
+    //                 type: 'Лом АКБ',
+    //                 cost: '58 000 ₽ / тонна',
+    //             },
+    //             {
+    //                 type: 'Лом алюминия',
+    //                 cost: '130 000 ₽ / тонна',
+    //             },
+    //             {
+    //                 type: 'Лом нержавейки (10%)',
+    //                 cost: '60 000 ₽ / тонна',
+    //             },
+    //             {
+    //                 type: '',
+    //                 cost: '',
+    //             },
+
+    //         ]
+    //     },
+    // ];
 
     return (
         <>
@@ -107,36 +140,33 @@ export default function Price() {
                 image="../info/price.png"
             />
 
-            
             <section className={styles.section}>
                 <div className="container">
-                    <h2 className="title_blue toggle_color center">Актуальные Цены на приём металлолома на 01.11.2024*</h2>
-                
-                    <div className={styles.wrapper}>
-                        {data.map((item, index) => {
+                    <h2 className="title_blue toggle_color center">Актуальные Цены на приём металлолома на 20.01.2025*</h2>
 
+                    <div className={styles.wrapper}>
+                        {posts.map((item, index) => {
                             return (
                                 <div key={index}>
-                                    <h3 className={styles.item_title}>{item.title}</h3>
-                                    <tr className={index % 2 ? `${styles.bg_head_blue}` : `${styles.bg_head_orange}`}>
-                                        <th>Тип лома</th>
-                                        <th>Цена</th>
-                                    </tr>
-                                
-                                    {item.data.map((subItem, idx) => {
-                                        return (
-                                            <tr key = { idx } className = {`${styles.row} ${idx % 2 ? styles.bg_row_white : styles.bg_row_gray}`}>
-                                                <td>
-                                                    {subItem.type}
-                                                </td>
+                                    <h3 className={styles.item_title}>{item.title.rendered}</h3>
+                                    <div className={index % 2 ? `${styles.bg_head_blue}` : `${styles.bg_head_orange}`}>
+                                        <div>Тип лома</div>
+                                        <div>Цена</div>
+                                    </div>
 
-                                                <td>
+                                    {item.acf.item.map((subItem, idx) => {
+                                        return (
+                                            <div key={idx} className={`${styles.row} ${idx % 2 ? styles.bg_row_white : styles.bg_row_gray}`}>
+                                                <div>
+                                                    {subItem.title}
+                                                </div>
+
+                                                <div>
                                                     {subItem.cost}
-                                                </td>
-                                            </tr>
+                                                </div>
+                                            </div>
                                         )
                                     })}
-                                            
                                 </div>
                             )
                         })}
@@ -148,7 +178,7 @@ export default function Price() {
                     </p>
                 </div>
             </section>
-            
+
             <Faq />
 
             <HaveQuestion />

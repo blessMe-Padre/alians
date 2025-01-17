@@ -1,11 +1,37 @@
+import axios from "axios";
+import { useState, useEffect } from 'react';
+
 import styles from './style.module.css';
 import faq_bg from '/public/faq/faq.png';
 import { motion } from 'framer-motion'
-import { useState } from 'react';
 
 const Faq = () => {
-
+    const [faqData, setFaqData] = useState([]);
     const [openIndex, setOpenIndex] = useState(null);
+
+    const getPost = async () => {
+        try {
+            const response = await axios.get('https://api.va.eco/wp-json/wp/v2/posts/42');
+            return response.data;
+        } catch (error) {
+            console.error("Ошибка при получении поста:", error);
+            throw error;
+        }
+    };
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const post = await getPost();
+                setFaqData(post.acf.faq);
+
+            } catch (error) {
+                console.error("Ошибка при загрузке поста:", error);
+            }
+        };
+
+        fetchProducts();
+    }, []);
 
     const variants = {
         visible: {
@@ -27,39 +53,6 @@ const Faq = () => {
         setOpenIndex(openIndex === index ? null : index);
     }
 
-    const data = [
-        {
-            'question': 'Какой вид лома можно сдать?',
-            'answer': "Какой вид лома можно сдать?"
-        },
-
-        {
-            'question': 'Какой вид лома нельзя сдать?',
-            'answer': "Какой вид лома нельзя сдать?"
-        },
-
-        {
-            'question': 'Какой вес лома считается минимальным для сдачи?',
-            'answer': "Какой вес лома считается минимальным для сдачи?"
-        },
-
-        {
-            'question': 'Где узнать точную цену приемки лома металлов на сегодня?',
-            'answer': "Где узнать точную цену приемки лома металлов на сегодня?"
-        },
-
-        {
-            'question': 'Что вы делаете с принятым металлоломом?',
-            'answer': "Что вы делаете с принятым металлоломом?"
-        },
-
-        {
-            'question': 'Можно ли заказать демонтаж и вывоз лома?',
-            'answer': "Можно ли заказать демонтаж и вывоз лома?"
-        }
-    ]
-
-
     return (
         <section className={styles.section}>
             <div className={`${styles.container} container`}>
@@ -68,7 +61,7 @@ const Faq = () => {
 
                 <div className={styles.content_wrapper}>
                     <ul className={styles.list}>
-                        {data.map((item, index) => (
+                        {faqData.map((item, index) => (
                             <li
                                 key={index}
                                 className={`${styles.item} overflow-hidden`}
@@ -102,7 +95,7 @@ const Faq = () => {
                         ))}
                     </ul>
 
-                    
+
                     <img src={faq_bg} className={styles.faq_bg} alt='' />
                 </div>
             </div>

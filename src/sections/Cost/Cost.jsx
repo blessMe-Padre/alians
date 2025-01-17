@@ -70,7 +70,7 @@ const Cost = () => {
         };
 
         fetchProducts();
-    }, []); //
+    }, []);
 
 
     return (
