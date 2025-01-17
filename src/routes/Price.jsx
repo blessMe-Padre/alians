@@ -10,8 +10,6 @@ import { HaveQuestion, Faq } from "../sections";
 export default function Price() {
     const [posts, setPosts] = useState([]);
     const apiBaseUrl = "https://api.va.eco/wp-json/wp/v2/posts?include[]=7&include[]=19";
-    console.log(posts);
-
 
     const getPosts = async () => {
         try {
@@ -39,76 +37,6 @@ export default function Price() {
 
         fetchProducts();
     }, []);
-
-    // const data = [
-    //     {
-    //         title: 'Черный лом',
-    //         data: [
-    //             {
-    //                 type: 'Лом марки 3А',
-    //                 cost: '14 000 ₽ / тонна',
-    //             },
-    //             {
-    //                 type: 'Лом марки 5А',
-    //                 cost: '11 900 ₽ / тонна',
-    //             },
-    //             {
-    //                 type: 'Лом марки 8А, 9А',
-    //                 cost: '13 500 ₽ / тонна',
-    //             },
-    //             {
-    //                 type: 'Лом марки 12А',
-    //                 cost: '11 500 ₽ / тонна',
-    //             },
-    //             {
-    //                 type: 'Лом марки 13А',
-    //                 cost: '6 500 ₽ / тонна',
-    //             },
-    //             {
-    //                 type: 'Лом марки 13А-1 ',
-    //                 cost: '12 100 ₽ / тонна',
-    //             },
-    //             {
-    //                 type: 'Стружка, пакетированный лом  ',
-    //                 cost: 'Не принимаются',
-    //             },
-    //         ]
-    //     },
-    //     {
-    //         title: 'Цветной лом',
-    //         data: [
-    //             {
-    //                 type: 'Лом меди  ',
-    //                 cost: '720 000 ₽ / тонна',
-    //             },
-    //             {
-    //                 type: 'Лом бронзы ',
-    //                 cost: '525 000 ₽ / тонна',
-    //             },
-    //             {
-    //                 type: 'Лом латуни ',
-    //                 cost: '425 000 ₽ / тонна',
-    //             },
-    //             {
-    //                 type: 'Лом АКБ',
-    //                 cost: '58 000 ₽ / тонна',
-    //             },
-    //             {
-    //                 type: 'Лом алюминия',
-    //                 cost: '130 000 ₽ / тонна',
-    //             },
-    //             {
-    //                 type: 'Лом нержавейки (10%)',
-    //                 cost: '60 000 ₽ / тонна',
-    //             },
-    //             {
-    //                 type: '',
-    //                 cost: '',
-    //             },
-
-    //         ]
-    //     },
-    // ];
 
     return (
         <>

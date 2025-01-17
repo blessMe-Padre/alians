@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { initPhoneMask } from './../../vendor/phone-mask.js';
 // import successImg from '/success.webp';
 
 import styles from './style.module.css';
@@ -8,8 +9,8 @@ const initialFields = [
     {
         label: 'Имя',
         type: 'text',
-        name: 'text-412',
-        id: 'text-412',
+        name: 'text-390',
+        id: 'text-390',
         validation_error: false,
         validation_message: '',
         placeholder: 'Введите имя/организацию',
@@ -17,8 +18,8 @@ const initialFields = [
     {
         label: 'Телефон',
         type: 'tel',
-        name: 'tel-533',
-        id: 'tel-533',
+        name: 'tel-869',
+        id: 'tel-869',
         validation_error: false,
         validation_message: '',
         placeholder: 'Введите телефон',
@@ -29,6 +30,8 @@ export default function Form({ title, subtitle, color = "#2a3a57", background = 
     const [fields, setFields] = useState(initialFields);
     const [formMessage, setFormMessage] = useState('');
     const [isActive, setIsActive] = useState(false);
+    const [error, setError] = useState(false);
+    const [isSuccess, setSuccess] = useState(false);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -42,10 +45,10 @@ export default function Form({ title, subtitle, color = "#2a3a57", background = 
         const formData = new FormData(event.target);
         formData.append("_wpcf7_unit_tag", "form_id");
         const response = await axios.post(
-            'https://api.freelancer-vl.ru/wp-json/contact-form-7/v1/contact-forms/38/feedback',
+            'https://api.va.eco/wp-json/contact-form-7/v1/contact-forms/47/feedback',
             formData,
         );
-        // console.log('Ответ от WordPress:', response);
+
         if (response.status !== 200) {
             return alert('Что-то пошло не так. Попробуйте еще раз.');
         }
@@ -55,6 +58,7 @@ export default function Form({ title, subtitle, color = "#2a3a57", background = 
                 const error = response.data.invalid_fields.find(x => x.field === field.name);
 
                 setIsActive(false);
+                setError(true)
                 return {
                     ...field,
                     validation_error: !!error,
@@ -64,9 +68,21 @@ export default function Form({ title, subtitle, color = "#2a3a57", background = 
         }
         else {
             setIsActive(true);
+            setError(false);
+            setSuccess(true)
         }
         setFormMessage(response.data.message);
     };
+
+    const inputRefs = useRef([]);
+
+    useEffect(() => {
+        inputRefs.current.forEach((input) => {
+            if (input) {
+                initPhoneMask(input);
+            }
+        });
+    }, []);
 
 
     return (
@@ -80,10 +96,10 @@ export default function Form({ title, subtitle, color = "#2a3a57", background = 
                     {subtitle}
                 </p>
 
-                {fields.map(field => (
+                {fields.map((field, index) => (
                     <div key={field.id} className='main-form__input'>
-                        {/* <label>{field.label}</label> */}
                         <input
+                            ref={field.type === 'tel' ? (el) => (inputRefs.current[index] = el) : null}
                             type={field.type}
                             name={field.name}
                             id={field.id}
@@ -105,7 +121,13 @@ export default function Form({ title, subtitle, color = "#2a3a57", background = 
                 </div>
                 <p>Нажимая кнопку, вы даете согласие на обработку персональных данных</p>
             </form>
-            <p className='main-form__error-text mt-25'>{formMessage}</p>
+
+            {error && (
+                <p className='main-form__error-text-sub'>{formMessage}</p>
+            )}
+            {isSuccess && (
+                <p className='main-form__success-text-sub'>{formMessage}</p>
+            )}
 
             <div className={`form-send-ok-popup ${isActive ? 'is-active' : ''}`}>
                 {/* <p>Сообщение успешно отправлено</p> */}

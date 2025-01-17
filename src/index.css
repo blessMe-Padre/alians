@@ -19,12 +19,12 @@
 
 
 ::-webkit-scrollbar {
-  width: 10px; 
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--blue);
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -32,7 +32,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
- background-color: #555;
+  background-color: #555;
 }
 
 @media (prefers-color-scheme: light) {
@@ -223,4 +223,33 @@ a {
   .areas .container {
     padding: 0;
   }
+}
+
+.main-form__input {
+  position: relative;
+}
+
+.main-form__error-text {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: red;
+}
+
+.main-form__error-text-sub {
+  color: red;
+  border: 1px solid red;
+  padding: 10px 20px;
+  margin-top: 25px;
+
+  font-weight: 500;
+}
+
+.main-form__success-text-sub {
+  color: green;
+  border: 1px solid green;
+  padding: 10px 20px;
+  margin-top: 25px;
+
+  font-weight: 500;
 }
