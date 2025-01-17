@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "../styles/homepage.module.css";
 import { Helmet } from "react-helmet";
 
@@ -15,25 +16,20 @@ export default function HomePage() {
     return (
         <>
             <Helmet>
-                <title>Главная страница - Ваша компания</title>
-                <meta name="description" content="Описание вашей компании, услуг и уникальных преимуществ." />
-                <meta name="keywords" content="компания, услуги, преимущества, о нас" />
+                <title>ГК "Восточный Альянс" - Главная</title>
+                <meta name="description" content="Переработка лома черных и цветных металлов" />
+                <meta name="keywords" content="Переработка лома черных и цветных металлов" />
 
                 {/* Open Graph (for social media sharing, like Facebook) */}
-                <meta property="og:title" content="О компании - Ваша компания" />
+                <meta property="og:title" content="Переработка лома черных и цветных металлов" />
                 <meta property="og:description" content="Узнайте больше о нашей компании и наших услугах." />
                 <meta property="og:image" content="URL_картинки_для_шеринга" />
-                <meta property="og:url" content="https://example.com/about" />
+                <meta property="og:url" content="https://va.eco" />
                 <meta property="og:type" content="website" />
 
-                {/* Twitter Card (for Twitter sharing) */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="О компании - Ваша компания" />
-                <meta name="twitter:description" content="Описание вашей компании и услуг." />
-                <meta name="twitter:image" content="URL_картинки_для_шеринга" />
 
                 {/* Additional Metadata */}
-                <link rel="canonical" href="https://example.com/about" />
+                <link rel="canonical" href="https://va.eco" />
                 <meta name="robots" content="index, follow" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Helmet>
@@ -104,7 +100,7 @@ export default function HomePage() {
                     <h2 className="title center toggle_color">направления работы</h2>
                     <ul className={styles.areas_list}>
                         <li className={styles.areas_item}>
-                            <a href="#">
+                            <Link to="/service_pererabotka">
                                 <div className="image-wrapper">
                                     <img src="./content/image-2.webp" width={467} height={250} alt="image" />
                                 </div>
@@ -113,10 +109,10 @@ export default function HomePage() {
                                     <p>Большая благоустроенная территория с удобным подъездом, оборудованные цеха для сортировки и хранения лома, сертифицированные автомобильные весы с максимальной нагрузкой до 60 тонн, современное оборудование и высококвалифицированный персонал</p>
                                     <img className={styles.areas_item_img} src="./icons/arrow-top-right.svg" width={40} height={40} alt="icon" />
                                 </div>
-                            </a>
+                            </Link>
                         </li>
                         <li className={styles.areas_item}>
-                            <a href="#">
+                            <Link to="/service_transport">
                                 <div className="image-wrapper">
                                     <img src="./content/image-3.webp" width={467} height={250} alt="image" />
                                 </div>
@@ -125,22 +121,20 @@ export default function HomePage() {
                                     <p>Собственный парк техники различной модификации (грузовые автомобили, грейферные и крановые установки, экскаваторы, мультилифты и иная спецтехника)</p>
                                     <img className={styles.areas_item_img} src="./icons/arrow-top-right.svg" width={40} height={40} alt="icon" />
                                 </div>
-                            </a>
+                            </Link>
                         </li>
                         <li className={styles.areas_item}>
-                            <a href="#">
+                            <Link to="/service_expedition">
                                 <div className="image-wrapper">
-                                    <img src="./content/image-3.webp" width={467} height={250} alt="image" />
+                                    <img src="./content/image-4.webp" width={467} height={250} alt="image" />
                                 </div>
                                 <div className={styles.areas_item_content}>
                                     <h3>Услуги внутрипортовой транспортной экспедиции при организации международной перевозки грузов</h3>
                                     <p>Услуга включает в себя целый комплекс таких услуг как: оформление всех необходимых документов, завоз и вывоз, прием и выдача грузов, терминальная обработка, погрузо-разгрузочные и складские услуги, информационное сопровождение и т.д. Услуга предоставляется «под ключ»</p>
                                     <img className={styles.areas_item_img} src="./icons/arrow-top-right.svg" width={40} height={40} alt="icon" />
                                 </div>
-                            </a>
+                            </Link>
                         </li>
-
-
                     </ul>
                 </div>
             </section>

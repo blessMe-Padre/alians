@@ -14,25 +14,19 @@ export default function Postavchiki() {
     return (
         <>
             <Helmet>
-                <title>Поставщикам</title>
-                <meta name="description" content="Описание вашей компании, услуг и уникальных преимуществ." />
+                <title>ГК "Восточный Альянс" - Поставщикам</title>
+                <meta name="description" content="Наша компания занимается скупкой металлолома в Дальневосточном Федеральном округе уже более десяти лет" />
                 <meta name="keywords" content="компания, услуги, преимущества, о нас" />
 
                 {/* Open Graph (for social media sharing, like Facebook) */}
-                <meta property="og:title" content="О компании - Ваша компания" />
+                <meta property="og:title" content="ГК Восточный Альянс - Поставщикам" />
                 <meta property="og:description" content="Узнайте больше о нашей компании и наших услугах." />
                 <meta property="og:image" content="URL_картинки_для_шеринга" />
-                <meta property="og:url" content="https://example.com/about" />
+                <meta property="og:url" content="https://va.eco/postavchiki" />
                 <meta property="og:type" content="website" />
 
-                {/* Twitter Card (for Twitter sharing) */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="О компании - Ваша компания" />
-                <meta name="twitter:description" content="Описание вашей компании и услуг." />
-                <meta name="twitter:image" content="URL_картинки_для_шеринга" />
-
                 {/* Additional Metadata */}
-                <link rel="canonical" href="https://example.com/about" />
+                <link rel="canonical" href="https://va.eco/postavchiki" />
                 <meta name="robots" content="index, follow" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Helmet>
@@ -46,7 +40,7 @@ export default function Postavchiki() {
                 <div className={`${styles.container} container`}>
                     <h2 className="title toggle_color center">Поставщикам</h2>
 
-                    <div className={styles.post_wrapper}>   
+                    <div className={styles.post_wrapper}>
                         <div>
                             <img src={post} className={styles.pattern} alt="pattern" />
                         </div>
@@ -73,7 +67,7 @@ export default function Postavchiki() {
                                         Транспортные услуги
                                     </p>
                                     <p className={styles.item_desc}>
-                                      Осуществляем перевозку чёрного и цветного металлолома любого вида и размера. Для транспортировки лома навалом, мы предоставляем грузовой автотранспорт со специальным кузовом — открытым контейнером (опен топ). Для самостоятельной погрузки металла, некоторые опен топы оснащаются грузовым краном с грейфером. Перевозка упакованного лома и металлической стружки в брикетах, либо мешках (биг бэгах), может осуществляться на обычном грузовом автотранспорте.
+                                        Осуществляем перевозку чёрного и цветного металлолома любого вида и размера. Для транспортировки лома навалом, мы предоставляем грузовой автотранспорт со специальным кузовом — открытым контейнером (опен топ). Для самостоятельной погрузки металла, некоторые опен топы оснащаются грузовым краном с грейфером. Перевозка упакованного лома и металлической стружки в брикетах, либо мешках (биг бэгах), может осуществляться на обычном грузовом автотранспорте.
                                     </p>
                                 </li>
                             </ul>
@@ -89,7 +83,7 @@ export default function Postavchiki() {
             <HaveQuestion />
 
 
-        
+
         </>
     )
 }

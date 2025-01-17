@@ -11,25 +11,19 @@ export default function About() {
     return (
         <>
             <Helmet>
-                <title>О компании страница - Ваша компания</title>
-                <meta name="description" content="Описание вашей компании, услуг и уникальных преимуществ." />
-                <meta name="keywords" content="компания, услуги, преимущества, о нас" />
+                <title>ГК "Восточный Альянс" - О компании</title>
+                <meta name="description" content="Группа компаний «Восточный альянс»" />
+                <meta name="keywords" content="Группа компаний «Восточный альянс»" />
 
                 {/* Open Graph (for social media sharing, like Facebook) */}
-                <meta property="og:title" content="О компании - Ваша компания" />
+                <meta property="og:title" content="О компании - Группа компаний «Восточный альянс»" />
                 <meta property="og:description" content="Узнайте больше о нашей компании и наших услугах." />
                 <meta property="og:image" content="URL_картинки_для_шеринга" />
-                <meta property="og:url" content="https://example.com/about" />
+                <meta property="og:url" content="https://va.eco/about" />
                 <meta property="og:type" content="website" />
 
-                {/* Twitter Card (for Twitter sharing) */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="О компании - Ваша компания" />
-                <meta name="twitter:description" content="Описание вашей компании и услуг." />
-                <meta name="twitter:image" content="URL_картинки_для_шеринга" />
-
                 {/* Additional Metadata */}
-                <link rel="canonical" href="https://example.com/about" />
+                <link rel="canonical" href="https://va.eco/about" />
                 <meta name="robots" content="index, follow" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Helmet>
@@ -55,16 +49,16 @@ export default function About() {
                                     — Честность перед клиентом
                                 </p>
                                 <p className={styles.desc_text}>
-                                    — Гибкий подход в ценообразовании 
+                                    — Гибкий подход в ценообразовании
                                 </p>
                                 <p className={styles.desc_text}>
-                                    — Лояльное отношение 
+                                    — Лояльное отношение
                                 </p>
                                 <p className={styles.desc_text}>
                                     — Работаем на 110%
                                 </p>
                                 <p className={styles.desc_text}>
-                                    — Стабильность и надежность 
+                                    — Стабильность и надежность
                                 </p>
                             </div>
                         </div>
@@ -140,7 +134,7 @@ export default function About() {
             <HaveQuestion />
 
 
-        
+
         </>
     )
 }

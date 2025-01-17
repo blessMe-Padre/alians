@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet";
-
 import styles from '../styles/service_exp.module.css';
 
-import { ServiceHero } from "../components/index"; 
+import { ServiceHero } from "../components/index";
 import complex from '/service/complex.png';
 
 import why_1 from '/service/why_1.svg';
@@ -11,28 +10,23 @@ import why_3 from '/service/why_3.svg';
 
 import { GetCost } from "../sections";
 export default function ServicePererabotka() {
+
     return (
         <>
             <Helmet>
-                <title>Услуги внутрипортовой транспортной экспедиции при организации международной перевозки грузов</title>
-                <meta name="description" content="Описание вашей компании, услуг и уникальных преимуществ." />
+                <title>ГК "Восточный Альянс" - Услуги внутрипортовой транспортной экспедиции при организации международной перевозки грузов</title>
+                <meta name="description" content="Услуги внутрипортовой транспортной экспедиции при организации международной перевозки грузов" />
                 <meta name="keywords" content="компания, услуги, преимущества, о нас" />
 
                 {/* Open Graph (for social media sharing, like Facebook) */}
-                <meta property="og:title" content="О компании - Ваша компания" />
+                <meta property="og:title" content="ГК Восточный Альянс - Услуги внутрипортовой транспортной экспедиции при организации международной перевозки грузов" />
                 <meta property="og:description" content="Узнайте больше о нашей компании и наших услугах." />
                 <meta property="og:image" content="URL_картинки_для_шеринга" />
-                <meta property="og:url" content="https://example.com/about" />
+                <meta property="og:url" content="https://va.eco/service_expedition" />
                 <meta property="og:type" content="website" />
 
-                {/* Twitter Card (for Twitter sharing) */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="О компании - Ваша компания" />
-                <meta name="twitter:description" content="Описание вашей компании и услуг." />
-                <meta name="twitter:image" content="URL_картинки_для_шеринга" />
-
                 {/* Additional Metadata */}
-                <link rel="canonical" href="https://example.com/about" />
+                <link rel="canonical" href="https://va.eco/service_expedition" />
                 <meta name="robots" content="index, follow" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Helmet>
@@ -51,17 +45,17 @@ export default function ServicePererabotka() {
                         <div>
                             <img src={complex} alt="" className={styles.img_complex} />
                         </div>
-                        
+
                         <div className={`${styles.bg_complex} ${styles.item}`}>
                             <ul className={styles.complex_list}>
 
-                                Предоставим необходимый комплекс услуг по внутрипортовому экспедированию импортных 
+                                Предоставим необходимый комплекс услуг по внутрипортовому экспедированию импортных
                                 и экспортных грузов «под ключ»
 
-                                    <li className={styles.coplex_item}>Внутрипортовое экспедирование</li>
-                                    <li className={styles.coplex_item}>Терминалы Приморского края</li>   
-                                    <li className={styles.coplex_item}>Вывоз морских контейнеров</li>   
-                                    <li className={styles.coplex_item}>Полный комплекс услуг по обработке грузов</li>  
+                                <li className={styles.coplex_item}>Внутрипортовое экспедирование</li>
+                                <li className={styles.coplex_item}>Терминалы Приморского края</li>
+                                <li className={styles.coplex_item}>Вывоз морских контейнеров</li>
+                                <li className={styles.coplex_item}>Полный комплекс услуг по обработке грузов</li>
                             </ul>
                         </div>
                     </div>
@@ -79,12 +73,12 @@ export default function ServicePererabotka() {
                         </div>
                         <div className={`${styles.why_item} box_shadow_main`}>
                             <img src={why_2} alt="" className={styles.why_icon} />
-                            <p className={styles.why_title}>Индивидуальный <br/> подход</p>
+                            <p className={styles.why_title}>Индивидуальный <br /> подход</p>
                         </div>
                         <div className={`${styles.why_item} box_shadow_main`}>
                             <img src={why_3} alt="" className={styles.why_icon} />
-                            <p className={styles.why_title}>Весь комплекс 
-                            услуг «под ключ»</p>
+                            <p className={styles.why_title}>Весь комплекс
+                                услуг «под ключ»</p>
                         </div>
                     </div>
                 </div>

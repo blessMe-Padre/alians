@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 15px;
 }
 
 .title {
@@ -20,8 +21,9 @@
 
 .nav>ul {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+    gap: 0 20px;
     list-style: none;
 }
 
@@ -52,7 +54,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 200px;
+    width: 320px;
     z-index: 5;
     -webkit-transform-origin: 0 0;
     -ms-transform-origin: 0 0;
@@ -106,6 +108,7 @@
     letter-spacing: 0.02em;
     color: var(--white);
     transition: color 0.3s ease;
+    flex: 0 0 auto;
 }
 
 .header_link:hover {
@@ -121,6 +124,7 @@
     justify-content: center;
     background-color: var(--orange);
     transition: background-color 0.3s ease;
+    flex: 0 0 auto;
 }
 
 .header_whatsapp:hover {
@@ -205,4 +209,12 @@
     .mobile_menu {
         min-width: 89%;
     }
+}
+
+
+.header_items_contact {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    flex-wrap: wrap;
 }

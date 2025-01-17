@@ -1,5 +1,6 @@
 .button {
     display: flex;
+    flex: 1 0 auto;
     border-radius: 6px;
     padding: 13px 40px;
     background-color: var(--orange);

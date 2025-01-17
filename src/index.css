@@ -17,6 +17,10 @@
   --toggle-color: var(--white);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 ::-webkit-scrollbar {
   width: 10px;

@@ -17,25 +17,19 @@ export default function ServicePererabotka() {
     return (
         <>
             <Helmet>
-                <title>Заготовка и переработка лома и отходов черных и цветных металлов</title>
-                <meta name="description" content="Описание вашей компании, услуг и уникальных преимуществ." />
+                <title>ГК "Восточный Альянс" - Заготовка и переработка лома и отходов черных и цветных металлов</title>
+                <meta name="description" content="Заготовка и переработка лома и отходов черных и цветных металлов" />
                 <meta name="keywords" content="компания, услуги, преимущества, о нас" />
 
                 {/* Open Graph (for social media sharing, like Facebook) */}
-                <meta property="og:title" content="О компании - Ваша компания" />
+                <meta property="og:title" content="Восточный Альянс - Заготовка и переработка лома и отходов черных и цветных металлов" />
                 <meta property="og:description" content="Узнайте больше о нашей компании и наших услугах." />
                 <meta property="og:image" content="URL_картинки_для_шеринга" />
-                <meta property="og:url" content="https://example.com/about" />
+                <meta property="og:url" content="https://va.eco/service_pererabotka" />
                 <meta property="og:type" content="website" />
 
-                {/* Twitter Card (for Twitter sharing) */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="О компании - Ваша компания" />
-                <meta name="twitter:description" content="Описание вашей компании и услуг." />
-                <meta name="twitter:image" content="URL_картинки_для_шеринга" />
-
                 {/* Additional Metadata */}
-                <link rel="canonical" href="https://example.com/about" />
+                <link rel="canonical" href="https://va.eco/service_pererabotka" />
                 <meta name="robots" content="index, follow" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Helmet>
@@ -51,7 +45,7 @@ export default function ServicePererabotka() {
                     <h2 className="title toggle_color center">Комплексная переработка <br /> металлолома</h2>
 
                     <div className={styles.pererabotka_wrapper}>
-                        
+
                         <div>
                             <img src={pattern} className={styles.pattern} alt="pattern" />
                         </div>
@@ -68,14 +62,14 @@ export default function ServicePererabotka() {
                                 <li className={styles.pererabotka_item}>
                                     <img src={per_2} alt="" className="" />
                                     <p className={styles.item_desc}>
-                                        Процесс переработки лома включает в себя сортировку, измельчение, очистку с последующим прессованием его в брикеты. Недостаточная эффективность технологий, нарушение требований к переработке – это одна из проблем, стоящих перед компаниями. На нашем предприятии используется современное оборудование для сортировки лома, у сотрудников, осуществляющих приемку, имеются все разрешительные документы для безопасной переработки лома.   
+                                        Процесс переработки лома включает в себя сортировку, измельчение, очистку с последующим прессованием его в брикеты. Недостаточная эффективность технологий, нарушение требований к переработке – это одна из проблем, стоящих перед компаниями. На нашем предприятии используется современное оборудование для сортировки лома, у сотрудников, осуществляющих приемку, имеются все разрешительные документы для безопасной переработки лома.
                                     </p>
                                 </li>
 
                                 <li className={styles.pererabotka_item}>
                                     <img src={per_3} alt="" className="" />
                                     <p className={styles.item_desc}>
-                                        Мы предоставляем Вам контейнер с открытым верхом под накопление лома и отходов. В процессе осуществления деятельности все металлические отходы будут складироваться в него. После наполнения (15-20 тонн), мы привозим порожний и забираем наполненный контейнер. Автомобиль самостоятельно выгружает и загружает контейнеры на прицеп, тем самым экономя Ваше время и деньги. 
+                                        Мы предоставляем Вам контейнер с открытым верхом под накопление лома и отходов. В процессе осуществления деятельности все металлические отходы будут складироваться в него. После наполнения (15-20 тонн), мы привозим порожний и забираем наполненный контейнер. Автомобиль самостоятельно выгружает и загружает контейнеры на прицеп, тем самым экономя Ваше время и деньги.
                                     </p>
                                 </li>
                             </ul>
