@@ -2,7 +2,8 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.jsx';
-import { initPhoneMask } from './vendor/phone-mask.js';
+import ErrorPage from "./routes/ErrorPage.jsx";
+
 
 import {
   createBrowserRouter,
@@ -10,13 +11,17 @@ import {
 } from "react-router-dom";
 
 import { Homepage, Contacts, Price, About, ServicePererabotka, ServiceTransport, ServiceExpedition, Postavchiki, ForClients, ForWorkers } from './routes/index.js';
-
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <App>
         <Homepage />
+      </App>
+    ),
+    errorElement: (
+      <App>
+        <ErrorPage />
       </App>
     ),
   },

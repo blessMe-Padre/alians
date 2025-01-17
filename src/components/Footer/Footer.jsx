@@ -30,11 +30,11 @@ export default function Footer() {
                 link: '/service_expedition',
                 title: "Услуги внутрипортовой транспортной экспедиции при организации международной перевозки грузов",
             }
-            
+
         ]
     };
 
-    
+
     const pagesData = {
         title: "Для вас",
         items: [
@@ -42,7 +42,7 @@ export default function Footer() {
                 link: '/about',
                 title: "О компании",
             },
-            
+
             {
                 link: '/postavchiki',
                 title: "Поставщикам",
@@ -62,14 +62,14 @@ export default function Footer() {
                 link: '/price',
                 title: "Цены",
             },
-           
+
             {
                 link: '/contacts',
                 title: "Контакты",
             },
         ]
     };
-    
+
 
     return (
         <section className={styles.section}>
@@ -89,7 +89,7 @@ export default function Footer() {
                                 <li key={index} className={styles.service_link}>
                                     <Link to={item.link}>{item.title}</Link>
                                 </li>
-                             ))}
+                            ))}
                         </ul>
 
                         <ul className={styles.footer_content}>
@@ -107,7 +107,7 @@ export default function Footer() {
                     </div>
                     <div className={styles.policy}>
                         <a href="/policy">Политика конфиденциальности</a>
-                        <p>©2025. ГК «Альянс». Все права защищены</p>
+                        <p>&copy;{new Date().getFullYear()}. ГК «Альянс». Все права защищены</p>
                     </div>
                 </div>
             </div>
