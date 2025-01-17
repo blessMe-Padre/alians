@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from 'react';
 
 import styles from './style.module.css';
-import faq_bg from '/public/faq/faq.png';
+import faq_bg from '/public/faq/faq.webp';
 import { motion } from 'framer-motion'
 
 const Faq = () => {
@@ -58,7 +58,6 @@ const Faq = () => {
             <div className={`${styles.container} container`}>
                 <h2 className='title_blue toggle_color center'>ОТВЕТИЛИ НА ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
 
-
                 <div className={styles.content_wrapper}>
                     <ul className={styles.list}>
                         {faqData.map((item, index) => (
@@ -95,8 +94,9 @@ const Faq = () => {
                         ))}
                     </ul>
 
-
-                    <img src={faq_bg} className={styles.faq_bg} alt='' />
+                    <div className="image-wrapper">
+                        <img src={faq_bg} className={styles.faq_bg} width={710} height={520} alt='image' />
+                    </div>
                 </div>
             </div>
         </section>

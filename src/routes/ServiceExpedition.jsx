@@ -33,7 +33,7 @@ export default function ServicePererabotka() {
 
             <ServiceHero
                 title="Услуги внутрипортовой транспортной экспедиции при организации международной перевозки грузов"
-                image="/service/service_3.png"
+                image="/service/service_3.webp"
                 max_width_more={1}
             />
 

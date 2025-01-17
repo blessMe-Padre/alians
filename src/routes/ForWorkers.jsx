@@ -27,7 +27,7 @@ export default function ForClients() {
 
 
             <ServiceHero
-                image="../info/workers.png"
+                image="../info/workers.webp"
             />
 
 

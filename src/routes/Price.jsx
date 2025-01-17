@@ -59,7 +59,7 @@ export default function Price() {
             </Helmet>
 
             <ServiceHero
-                image="../info/price.png"
+                image="../info/price.webp"
             />
 
             <section className={styles.section}>

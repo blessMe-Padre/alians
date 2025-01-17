@@ -33,3 +33,13 @@ add_action('rest_api_init', function() {
         'schema' => null,
     ));
 });
+
+// при перезагрузке странице на роутах чинит 404
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

@@ -2,9 +2,9 @@ import { Helmet } from "react-helmet";
 
 import styles from '../styles/service_pererabotka.module.css';
 
-import pattern from '/service/pattern.png';
-import mettals_1 from '/service/mettals_1.png';
-import mettals_2 from '/service/mettals_2.png';
+import pattern from '/service/pattern.webp';
+import mettals_1 from '/service/mettals_1.webp';
+import mettals_2 from '/service/mettals_2.webp';
 
 import per_1 from '/service/per_1.svg';
 import per_2 from '/service/per_2.svg';
@@ -36,7 +36,7 @@ export default function ServicePererabotka() {
 
             <ServiceHero
                 title="Заготовка и переработка лома и отходов черных и цветных металлов"
-                image="/service/service_1.png"
+                image="/service/service_1.webp"
                 desc="Используем комплексный подход по взаимодействию с клиентами. Применяем современные технологии и высокий уровень профессионализма наших сотрудников для улучшения качества процесса приемки и формирования лояльности клиентов."
             />
 

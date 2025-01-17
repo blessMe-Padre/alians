@@ -3,8 +3,8 @@ import styles from '../styles/post.module.css';
 
 import { ServiceHero } from '../components'
 
-import post from '/post/post_1.png';
-import post_2 from '/post/post_2.png';
+import post from '/post/post_1.jpg';
+import post_2 from '/post/post_2.jpg';
 
 import post_icon_1 from '/post/post_1_i.png';
 import post_icon_2 from '/post/post_2_i.png';
@@ -33,7 +33,7 @@ export default function Postavchiki() {
 
 
             <ServiceHero
-                image="../post/post.png"
+                image="../post/post.jpg"
             />
 
             <section className={styles.section}>

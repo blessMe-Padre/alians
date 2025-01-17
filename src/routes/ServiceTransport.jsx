@@ -96,7 +96,7 @@ export default function ServiceTransport() {
 
             <ServiceHero
                 title="ТРАНСПОРТНЫЕ УСЛУГИ"
-                image="/service/service_2.png"
+                image="/service/service_2.webp"
                 desc="Имеем большой парк автомобилей для организации погрузки и вывоза лома своими силами."
             />
 

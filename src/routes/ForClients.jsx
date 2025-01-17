@@ -27,7 +27,7 @@ export default function ForClients() {
 
 
             <ServiceHero
-                image="../info/clients.png"
+                image="../info/clients.webp"
             />
 
             <section className={styles.section}>

@@ -31,7 +31,7 @@ export default function About() {
 
             <ServiceHero
                 title="Группа компаний «Восточный альянс»"
-                image="../about/about.png"
+                image="../about/about.webp"
             />
 
             <section className={styles.section}>
