@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 
 import { Homepage, Contacts, Price, About, ServicePererabotka, ServiceTransport, ServiceExpedition, Postavchiki, ForClients, ForWorkers } from './routes/index.js';
+import Policy from './routes/Policy.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -100,6 +101,14 @@ const router = createBrowserRouter([
     element: (
       <App>
         <ForWorkers />
+      </App>
+    ),
+  },
+  {
+    path: "/policy",
+    element: (
+      <App>
+        <Policy />
       </App>
     ),
   },

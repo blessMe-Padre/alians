@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 import styles from '../styles/about.module.css';
-
+import { Link } from "react-router-dom";
 import ab_1 from '/about/ab_1.png';
 import ab_2 from '/about/ab_2.png';
 
@@ -85,7 +85,7 @@ export default function About() {
                     <h2 className="title center toggle_color">направления работы</h2>
                     <ul className={styles.areas_list}>
                         <li className={styles.areas_item}>
-                            <a href="#">
+                            <Link to="/service_pererabotka">
                                 <div className="image-wrapper">
                                     <img src="./content/image-2.webp" width={467} height={250} alt="image" />
                                 </div>
@@ -94,10 +94,10 @@ export default function About() {
                                     <p>Большая благоустроенная территория с удобным подъездом, оборудованные цеха для сортировки и хранения лома, сертифицированные автомобильные весы с максимальной нагрузкой до 60 тонн, современное оборудование и высококвалифицированный персонал</p>
                                     <img className={styles.areas_item_img} src="./icons/arrow-top-right.svg" width={40} height={40} alt="icon" />
                                 </div>
-                            </a>
+                            </Link>
                         </li>
                         <li className={styles.areas_item}>
-                            <a href="#">
+                            <Link to="/service_transport">
                                 <div className="image-wrapper">
                                     <img src="./content/image-3.webp" width={467} height={250} alt="image" />
                                 </div>
@@ -106,22 +106,20 @@ export default function About() {
                                     <p>Собственный парк техники различной модификации (грузовые автомобили, грейферные и крановые установки, экскаваторы, мультилифты и иная спецтехника)</p>
                                     <img className={styles.areas_item_img} src="./icons/arrow-top-right.svg" width={40} height={40} alt="icon" />
                                 </div>
-                            </a>
+                            </Link>
                         </li>
                         <li className={styles.areas_item}>
-                            <a href="#">
+                            <Link to="/service_expedition">
                                 <div className="image-wrapper">
-                                    <img src="./content/image-3.webp" width={467} height={250} alt="image" />
+                                    <img src="./content/image-4.webp" width={467} height={250} alt="image" />
                                 </div>
                                 <div className={styles.areas_item_content}>
                                     <h3>Услуги внутрипортовой транспортной экспедиции при организации международной перевозки грузов</h3>
                                     <p>Услуга включает в себя целый комплекс таких услуг как: оформление всех необходимых документов, завоз и вывоз, прием и выдача грузов, терминальная обработка, погрузо-разгрузочные и складские услуги, информационное сопровождение и т.д. Услуга предоставляется «под ключ»</p>
                                     <img className={styles.areas_item_img} src="./icons/arrow-top-right.svg" width={40} height={40} alt="icon" />
                                 </div>
-                            </a>
+                            </Link>
                         </li>
-
-
                     </ul>
                 </div>
             </section>
