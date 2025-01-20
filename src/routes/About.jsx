@@ -28,7 +28,6 @@ export default function About() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Helmet>
 
-
             <ServiceHero
                 title="Группа компаний «Восточный альянс»"
                 image="../about/about.webp"

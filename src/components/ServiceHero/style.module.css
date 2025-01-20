@@ -4,8 +4,13 @@
 
 .service_content {
     margin: 0 auto;
-    padding-top: clamp(3.125rem, 0.4464rem + 13.3929vw, 12.5rem);
-    padding-bottom: clamp(3.125rem, 0.4464rem + 13.3929vw, 12.5rem);
+    /* padding-top: clamp(3.125rem, 0.4464rem + 13.3929vw, 12.5rem); */
+    /* padding-bottom: clamp(3.125rem, 0.4464rem + 13.3929vw, 12.5rem); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
     z-index: 1;
     position: relative;
     max-width: 900px;
@@ -73,5 +78,8 @@
         max-height: 370px;
     }
 
+    .service_content {
+        height: 35vh;
+    }
 
 }

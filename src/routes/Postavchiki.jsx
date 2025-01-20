@@ -38,7 +38,7 @@ export default function Postavchiki() {
 
             <section className={styles.section}>
                 <div className={`${styles.container} container`}>
-                    <h2 className="title toggle_color center">Поставщикам</h2>
+                    <h2 className="title toggle_color center">для поставщиков</h2>
 
                     <div className={styles.post_wrapper}>
                         <div>

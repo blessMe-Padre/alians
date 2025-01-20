@@ -62,10 +62,16 @@ export default function Price() {
                 image="../info/price.webp"
             />
 
+            <div className="container">
+                <div className={styles.new_text_wrapper}>
+                    <p className={styles.new_text}>Мы предлагаем самые выгодные цены за лом с минимальным засором.</p>
+                    <p className={styles.new_text}>У нас гибкая система ценообразования и индивидуальный подход к каждому клиенту.</p>
+                </div>
+            </div>
+
             <section className={styles.section}>
                 <div className="container">
                     <h2 className="title_blue toggle_color center">Актуальные Цены на приём металлолома на 20.01.2025*</h2>
-
                     <div className={styles.wrapper}>
                         {posts.map((item, index) => {
                             return (

@@ -107,7 +107,7 @@ export default function Footer() {
                     </div>
                     <div className={styles.policy}>
                         <Link to={'/policy'}>Политика конфиденциальности</Link>
-                        <p>&copy;{new Date().getFullYear()}. ГК «Альянс». Все права защищены</p>
+                        <p>&copy;{new Date().getFullYear()}. ГК «Восточный Альянс». Все права защищены</p>
                     </div>
                 </div>
             </div>

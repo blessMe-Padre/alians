@@ -1,8 +1,16 @@
-
 .section {
     padding: 60px 0;
 }
 
+.new_text_wrapper {
+    margin-top: 40px;
+}
+
+.new_text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.25;
+}
 
 .content {
     max-width: 900px;
@@ -74,7 +82,8 @@
     background-color: var(--orange);
 }
 
-.bg_head_orange > *, .bg_head_blue {
+.bg_head_orange>*,
+.bg_head_blue {
     color: var(--white);
 }
 
@@ -93,7 +102,8 @@
         grid-template-columns: repeat(1, 1fr);
         gap: 30px;
     }
-     .section {
+
+    .section {
         padding: 30px 0 !important;
     }
 }
@@ -102,8 +112,8 @@
     .section div.container {
         margin-right: -20px;
         margin-left: -20px;
-    } 
-   
+    }
+
     .wrapper {
         display: grid;
         grid-template-columns: repeat(1, 1fr);

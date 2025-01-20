@@ -35,7 +35,7 @@ export const ServiceHero = ({
                         {/* <img className={styles.bg_service} src={image} alt={title} /> */}
 
                         <div className={`${styles.service_content} ${max_width_more === 1 ? styles.max_width_more : ''}`}>
-                            <h2 className='title center'>
+                            <h2 className='title center mb-10'>
                                 {title}
                             </h2>
 

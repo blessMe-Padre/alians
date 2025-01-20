@@ -11,7 +11,7 @@ const MapInfo = ({ pattern }) => {
             'address': 'Приморский край, г. Владивосток, ул. Некрасовская, 36Б, офис 903',
             'phone': '+7 (999) 617-73-31',
             'phone_bot': '+79996177331',
-            'email': 'info@va.ecos'
+            'email': 'info@va.eco'
         },
 
         {

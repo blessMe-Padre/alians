@@ -81,7 +81,7 @@ const Cost = () => {
 
             <div className="container">
                 <div className={styles.section_wrapper}>
-                    <h2 className={`title ${styles.title}`}> Стоимость металлолома на 01.11.2024*</h2>
+                    <h2 className={`title ${styles.title}`}> Стоимость металлолома на 20.01.2025*</h2>
 
                     <div className={styles.buttons_wrapper}>
                         {

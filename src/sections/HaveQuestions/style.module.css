@@ -4,7 +4,7 @@
 
 .section_wrapper {
     border-radius: 30px;
-    background-image: url('./map_info/pattern_bg_1.png');
+    background-image: url('../map_info/pattern_bg_1.png');
     background-repeat: no-repeat;
     background-size: cover;
 

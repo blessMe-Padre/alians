@@ -55,7 +55,7 @@ export default function Header() {
                                     </div>
                                 </Link>
                                 <ul className={styles.submenu}>
-                                    <li><Link className={styles.link} to="/postavchiki">Поставщикам</Link></li>
+                                    <li><Link className={styles.link} to="/postavchiki">для поставщиков</Link></li>
                                     <li><Link className={styles.link} to="/for_clients">для клиентов</Link></li>
                                     <li><Link className={styles.link} to="/for_workers">для сотрудников</Link></li>
                                 </ul>
@@ -68,7 +68,7 @@ export default function Header() {
                     </nav>
 
                     <div className={styles.header_items_contact}>
-                        <a className={styles.header_link} href="tel:+79996177331">+7(999)617-73-31</a>
+                        <a className={styles.header_link} href="tel:+79996177331">+7 (999) 617-73-31</a>
                         <a className={styles.header_link} href="mailto:info@va.eco">info@va.eco</a>
                     </div>
 
