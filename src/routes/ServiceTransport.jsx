@@ -1,9 +1,5 @@
 import { Helmet } from "react-helmet";
-
 import styles from '../styles/service_transport.module.css';
-
-import { ServiceHero } from "../components/index";
-
 import React, { useState, useEffect } from 'react';
 
 
@@ -12,6 +8,7 @@ import our_2 from '/service/our_2.png';
 import our_3 from '/service/our_3.png';
 
 import { GetCost } from "../sections";
+import VideoSection from "../components/VideoSection/VideoSection";
 export default function ServiceTransport() {
 
     const [screenWidth, setScreenWidth] = useState(0);
@@ -94,11 +91,7 @@ export default function ServiceTransport() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Helmet>
 
-            <ServiceHero
-                title="ТРАНСПОРТНЫЕ УСЛУГИ"
-                image="/service/service_2.webp"
-                desc="Имеем большой парк автомобилей для организации погрузки и вывоза лома своими силами."
-            />
+            <VideoSection />
 
             <section className={styles.section}>
                 <div className={`${styles.container} container`}>

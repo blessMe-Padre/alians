@@ -72,7 +72,7 @@ export default function Footer() {
 
 
     return (
-        <section className={styles.section}>
+        <footer className={styles.section}>
             <div className={`${styles.bg_footer} page-wrapper`}>
                 <div className="container">
                     <div className={styles.footer_wrapper}>
@@ -111,6 +111,6 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-        </section>
+        </footer>
     )
 }

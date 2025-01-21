@@ -8,6 +8,13 @@
     gap: 20px;
 }
 
+.list {
+    padding: 0;
+    list-style: none !important;
+    margin: 0;
+    width: 55%;
+}
+
 .faq_bg {
     border-radius: 20px;
 }
@@ -97,6 +104,11 @@
 @media screen and (max-width: 1024px) {
     .content_wrapper {
         flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .list {
+        width: 100%;
     }
 }
 
@@ -146,10 +158,4 @@
 
 .item_content {
     margin-bottom: 10px;
-}
-
-.list {
-    padding: 0;
-    list-style: none !important;
-    margin: 0;
 }

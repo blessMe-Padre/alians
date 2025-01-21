@@ -104,7 +104,7 @@ export default function Header() {
                         <li><Link onClick={handleOpenedClick} className={styles.link} to="/service_pererabotka">Заготовка и переработка лома и отходов черных и цветных металлов</Link></li>
                         <li><Link onClick={handleOpenedClick} className={styles.link} to="/service_transport">Транспортные услуги</Link></li>
                         <li><Link onClick={handleOpenedClick} className={styles.link} to="/service_expedition">Услуги внутрипортовой транспортной экспедиции при организации международной перевозки грузов</Link></li>
-                        <li><Link onClick={handleOpenedClick} className={styles.link} to="/postavchiki">Поставщикам</Link></li>
+                        <li><Link onClick={handleOpenedClick} className={styles.link} to="/postavchiki">Для поставщиков</Link></li>
                         <li><Link onClick={handleOpenedClick} className={styles.link} to="/for_clients">Для клиентов</Link></li>
                         <li><Link onClick={handleOpenedClick} className={styles.link} to="/for_workers">Для сотрудников</Link></li>
                         <li><Link onClick={handleOpenedClick} className={styles.link} to="/price">Цены</Link></li>

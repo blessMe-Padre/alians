@@ -119,6 +119,12 @@ a {
   margin-bottom: 50px;
 }
 
+@media (max-width:560px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
 .title_blue {
   font-family: 'Proxima Nova';
   color: var(--blue);
@@ -131,6 +137,13 @@ a {
 
 .toggle_color {
   color: var(--toggle-color);
+}
+
+@media (max-width:560px) {
+  .title_blue {
+    margin-bottom: 30px;
+  }
+
 }
 
 .center {
@@ -229,6 +242,10 @@ a {
   .have_q .container,
   .areas .container {
     padding: 0;
+  }
+
+  .video_container {
+    margin: 0 -20px;
   }
 }
 
