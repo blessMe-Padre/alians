@@ -12,11 +12,11 @@ export default function About() {
         <>
             <Helmet>
                 <title>ГК "Восточный Альянс" - О компании</title>
-                <meta name="description" content="Группа компаний «Восточный альянс»" />
-                <meta name="keywords" content="Группа компаний «Восточный альянс»" />
+                <meta name="description" content="Группа компаний 'Восточный Альянс'" />
+                <meta name="keywords" content="Группа компаний 'Восточный Альянс'" />
 
                 {/* Open Graph (for social media sharing, like Facebook) */}
-                <meta property="og:title" content="О компании - Группа компаний «Восточный альянс»" />
+                <meta property="og:title" content="О компании - Группа компаний 'Восточный Альянс'" />
                 <meta property="og:description" content="Узнайте больше о нашей компании и наших услугах." />
                 <meta property="og:image" content="URL_картинки_для_шеринга" />
                 <meta property="og:url" content="https://va.eco/about" />
@@ -29,7 +29,7 @@ export default function About() {
             </Helmet>
 
             <ServiceHero
-                title="Группа компаний «Восточный альянс»"
+                title='Группа компаний "Восточный Альянс"'
                 image="../about/about.webp"
             />
 

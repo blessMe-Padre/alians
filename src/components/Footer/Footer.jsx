@@ -6,7 +6,7 @@ export default function Footer() {
 
     const footerData = {
         logo: logo,
-        phone: '+7(999)617-73-31',
+        phone: '+7 (999) 617-73-31',
         phoneLink: 'tel:+79996177331',
         email: 'info@va.eco',
         emailLink: 'mailto:info@va.eco'
@@ -107,7 +107,7 @@ export default function Footer() {
                     </div>
                     <div className={styles.policy}>
                         <Link to={'/policy'}>Политика конфиденциальности</Link>
-                        <p>&copy;{new Date().getFullYear()}. ГК «Восточный Альянс». Все права защищены</p>
+                        <p>&copy;{new Date().getFullYear()}. ГК "Восточный Альянс". Все права защищены</p>
                     </div>
                 </div>
             </div>

@@ -71,12 +71,12 @@ export default function HomePage() {
 
             <section className={styles.license}>
                 <h2 className="title center toggle_color">Лицензированная деятельность группы компаний
-                    «ВОСТОЧНЫЙ АЛЬЯНС»</h2>
+                    "Восточный Альянс"</h2>
                 <div className={styles.license_wrapper}>
                     <ul className={styles.license_list}>
                         <li className={styles.license_item}>
                             <div className={styles.license_count}>01</div>
-                            <p><strong>Основным направлением деятельности ГК «Восточный Альянс»</strong> является прием и переработка лома черных и цветных металлов.</p>
+                            <p><strong>Основным направлением деятельности ГК "Восточный Альянс"</strong> является прием и переработка лома черных и цветных металлов.</p>
                         </li>
                         <li className={styles.license_item}>
                             <div className={styles.license_count}>02</div>

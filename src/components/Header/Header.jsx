@@ -111,7 +111,7 @@ export default function Header() {
                     </ul>
                 </nav>
 
-                <a className={styles.header_link} href="tel:+79996177331">+7(999)617-73-31</a>
+                <a className={styles.header_link} href="tel:+79996177331">+7 (999)617-73-31</a>
                 <a className={styles.header_link} href="mailto:info@va.eco">info@va.eco</a>
 
                 <div className={styles.header_button_wrapper}>
