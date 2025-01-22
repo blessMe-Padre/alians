@@ -41,7 +41,7 @@ export default function Price() {
     return (
         <>
             <Helmet>
-                <title>ГК "Восточный Альянс" - Актуальные Цены</title>
+                <title>ГК &quot;Восточный Альянс&quot; - Актуальные Цены</title>
                 <meta name="description" content="Актуальные Цены на приём металлолома" />
                 <meta name="keywords" content="компания, услуги, преимущества, о нас" />
 
@@ -71,7 +71,7 @@ export default function Price() {
 
             <section className={styles.section}>
                 <div className="container">
-                    <h2 className="title_blue toggle_color center">Актуальные Цены на приём металлолома на 20.01.2025*</h2>
+                    <h2 className="title_blue toggle_color center">Актуальные Цены на приём металлолома на {posts[0]?.acf?.date || posts[1]?.acf?.date}*</h2>
                     <div className={styles.wrapper}>
                         {posts.map((item, index) => {
                             return (
