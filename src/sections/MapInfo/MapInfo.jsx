@@ -3,7 +3,38 @@ import pattern_bg from '/public/map_info/pattern_bg_1.png';
 import pattern_bg_2 from '/public/map_info/pattern_bg_2.webp';
 import geo from '/public/icons/geo.svg';
 
+import axios from "axios";
+import { useState, useEffect } from 'react';
+
 const MapInfo = ({ pattern }) => {
+    const [contactData, setContactData] = useState([]);
+
+    console.log(contactData);
+
+
+    const getPost = async () => {
+        try {
+            const response = await axios.get('https://api.va.eco/wp-json/wp/v2/posts/56');
+            return response.data;
+        } catch (error) {
+            console.error("Ошибка при получении поста:", error);
+            throw error;
+        }
+    };
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const post = await getPost();
+                setContactData(post.acf.contacts);
+
+            } catch (error) {
+                console.error("Ошибка при загрузке поста:", error);
+            }
+        };
+
+        fetchProducts();
+    }, []);
 
     const data = [
         {
@@ -88,7 +119,7 @@ const MapInfo = ({ pattern }) => {
 
                     <div className={`${styles.contacts_wrapper} box_shadow_main`}>
                         <ul className={styles.contacts_list}>
-                            {data.map((item, idx) => (
+                            {contactData.map((item, idx) => (
                                 <li key={idx} className={styles.contacts_item}>
                                     <img src={geo} className={styles.geo_svg} alt='geo' />
                                     <p className={styles.item_title}>{item.title}</p>
